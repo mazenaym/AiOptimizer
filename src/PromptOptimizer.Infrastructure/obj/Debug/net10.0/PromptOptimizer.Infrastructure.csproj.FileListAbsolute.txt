@@ -1,0 +1,17 @@
+E:\Projects\aioptimizer\src\PromptOptimizer.Infrastructure\bin\Debug\net10.0\PromptOptimizer.Infrastructure.deps.json
+E:\Projects\aioptimizer\src\PromptOptimizer.Infrastructure\bin\Debug\net10.0\PromptOptimizer.Infrastructure.dll
+E:\Projects\aioptimizer\src\PromptOptimizer.Infrastructure\bin\Debug\net10.0\PromptOptimizer.Infrastructure.pdb
+E:\Projects\aioptimizer\src\PromptOptimizer.Infrastructure\bin\Debug\net10.0\PromptOptimizer.Domain.dll
+E:\Projects\aioptimizer\src\PromptOptimizer.Infrastructure\bin\Debug\net10.0\PromptOptimizer.Domain.pdb
+E:\Projects\aioptimizer\src\PromptOptimizer.Infrastructure\obj\Debug\net10.0\PromptOptimizer.Infrastructure.csproj.AssemblyReference.cache
+E:\Projects\aioptimizer\src\PromptOptimizer.Infrastructure\obj\Debug\net10.0\PromptOptimizer.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+E:\Projects\aioptimizer\src\PromptOptimizer.Infrastructure\obj\Debug\net10.0\PromptOptimizer.Infrastructure.AssemblyInfoInputs.cache
+E:\Projects\aioptimizer\src\PromptOptimizer.Infrastructure\obj\Debug\net10.0\PromptOptimizer.Infrastructure.AssemblyInfo.cs
+E:\Projects\aioptimizer\src\PromptOptimizer.Infrastructure\obj\Debug\net10.0\PromptOptimizer.Infrastructure.csproj.CoreCompileInputs.cache
+E:\Projects\aioptimizer\src\PromptOptimizer.Infrastructure\obj\Debug\net10.0\PromptOp.02443728.Up2Date
+E:\Projects\aioptimizer\src\PromptOptimizer.Infrastructure\obj\Debug\net10.0\PromptOptimizer.Infrastructure.dll
+E:\Projects\aioptimizer\src\PromptOptimizer.Infrastructure\obj\Debug\net10.0\refint\PromptOptimizer.Infrastructure.dll
+E:\Projects\aioptimizer\src\PromptOptimizer.Infrastructure\obj\Debug\net10.0\PromptOptimizer.Infrastructure.pdb
+E:\Projects\aioptimizer\src\PromptOptimizer.Infrastructure\obj\Debug\net10.0\ref\PromptOptimizer.Infrastructure.dll
+E:\Projects\aioptimizer\src\PromptOptimizer.Infrastructure\bin\Debug\net10.0\PromptOptimizer.Application.dll
+E:\Projects\aioptimizer\src\PromptOptimizer.Infrastructure\bin\Debug\net10.0\PromptOptimizer.Application.pdb

@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/PromptOptimizer.Api/PromptOptimizer.Api.csproj" />
+    <Project Path="src/PromptOptimizer.Application/PromptOptimizer.Application.csproj" />
+    <Project Path="src/PromptOptimizer.Domain/PromptOptimizer.Domain.csproj" />
+    <Project Path="src/PromptOptimizer.Infrastructure/PromptOptimizer.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/PromptOptimizer.IntegrationTests/PromptOptimizer.IntegrationTests.csproj" />
+    <Project Path="tests/PromptOptimizer.UnitTests/PromptOptimizer.UnitTests.csproj" />
+  </Folder>
+</Solution>
