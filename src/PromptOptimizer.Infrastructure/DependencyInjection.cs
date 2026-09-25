@@ -1,11 +1,14 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using PromptOptimizer.Application.Auth.Interfaces;
 using PromptOptimizer.Application.Common.Interfaces;
 using PromptOptimizer.Infrastructure.AI;
 using PromptOptimizer.Infrastructure.AI.Gemini;
 using PromptOptimizer.Infrastructure.AI.Ollama;
 using PromptOptimizer.Infrastructure.AI.OpenRouter;
+using PromptOptimizer.Infrastructure.Authentication;
+
 //using PromptOptimizer.Infrastructure.Authentication;
 //using PromptOptimizer.Infrastructure.Caching;
 using PromptOptimizer.Infrastructure.ExternalServices;
@@ -26,8 +29,8 @@ public static class DependencyInjection
         services.AddScoped<IAppDbContext>(provider => (IAppDbContext)provider.GetRequiredService<AppDbContext>());
 
         // Auth & Security
-        //services.AddSingleton<IPasswordHasher, PasswordHasher>();
-        //services.AddSingleton<IJwtTokenGenerator, JwtService>();
+        services.AddScoped<IJwtService, JwtService>();
+        services.AddScoped<IRefreshTokenService, RefreshTokenService>();
 
         // Caching
         services.AddDistributedMemoryCache(); // Fallback for Redis or memory cache

@@ -20,7 +20,7 @@ public class Prompt : AuditableEntity
 
     // Navigation
 
-    public User User { get; set; } = null!;
+    public ApplicationUser User { get; set; } = null!;
 
     public PromptCategory? Category { get; set; }
 

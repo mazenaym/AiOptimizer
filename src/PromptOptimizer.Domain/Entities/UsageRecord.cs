@@ -31,7 +31,7 @@ public class UsageRecord : BaseEntity
 
     // Navigation
 
-    public User User { get; set; } = null!;
+    public ApplicationUser User { get; set; } = null!;
 
     public Optimization? Optimization { get; set; }
 

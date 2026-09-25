@@ -1,9 +1,12 @@
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using PromptOptimizer.Domain.Entities;
 
 namespace PromptOptimizer.Infrastructure.Persistence;
 
-public class AppDbContext : DbContext
+public class AppDbContext
+    : IdentityDbContext<ApplicationUser, IdentityRole<Guid>, Guid>
 {
     public AppDbContext(
         DbContextOptions<AppDbContext> options)
@@ -11,41 +14,27 @@ public class AppDbContext : DbContext
     {
     }
 
-    public DbSet<User> Users => Set<User>();
+    public DbSet<Prompt> Prompts => Set<Prompt>();
 
-    public DbSet<RefreshToken> RefreshTokens
-        => Set<RefreshToken>();
+    public DbSet<PromptCategory> PromptCategories => Set<PromptCategory>();
 
-    public DbSet<Prompt> Prompts
-        => Set<Prompt>();
+    public DbSet<Optimization> Optimizations => Set<Optimization>();
 
-    public DbSet<PromptCategory> PromptCategories
-        => Set<PromptCategory>();
+    public DbSet<AIProvider> AIProviders => Set<AIProvider>();
 
-    public DbSet<Optimization> Optimizations
-        => Set<Optimization>();
+    public DbSet<AIModel> AIModels => Set<AIModel>();
 
-    public DbSet<AIProvider> AIProviders
-        => Set<AIProvider>();
+    public DbSet<PromptTemplate> PromptTemplates => Set<PromptTemplate>();
 
-    public DbSet<AIModel> AIModels
-        => Set<AIModel>();
+    public DbSet<UsageRecord> UsageRecords => Set<UsageRecord>();
 
-    public DbSet<PromptTemplate> PromptTemplates
-        => Set<PromptTemplate>();
+    public DbSet<Plan> Plans => Set<Plan>();
 
-    public DbSet<UsageRecord> UsageRecords
-        => Set<UsageRecord>();
+    public DbSet<Subscription> Subscriptions => Set<Subscription>();
 
-    public DbSet<Plan> Plans
-        => Set<Plan>();
+    public DbSet<RefreshToken> RefreshTokens => Set<RefreshToken>();
 
-    public DbSet<Subscription> Subscriptions
-        => Set<Subscription>();
-
-
-    protected override void OnModelCreating(
-        ModelBuilder modelBuilder)
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
 
