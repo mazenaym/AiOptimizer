@@ -1,10 +1,12 @@
 E:\Projects\aioptimizer\src\PromptOptimizer.Domain\bin\Debug\net10.0\PromptOptimizer.Domain.deps.json
 E:\Projects\aioptimizer\src\PromptOptimizer.Domain\bin\Debug\net10.0\PromptOptimizer.Domain.dll
 E:\Projects\aioptimizer\src\PromptOptimizer.Domain\bin\Debug\net10.0\PromptOptimizer.Domain.pdb
+E:\Projects\aioptimizer\src\PromptOptimizer.Domain\obj\Debug\net10.0\PromptOptimizer.Domain.csproj.AssemblyReference.cache
 E:\Projects\aioptimizer\src\PromptOptimizer.Domain\obj\Debug\net10.0\PromptOptimizer.Domain.GeneratedMSBuildEditorConfig.editorconfig
 E:\Projects\aioptimizer\src\PromptOptimizer.Domain\obj\Debug\net10.0\PromptOptimizer.Domain.AssemblyInfoInputs.cache
 E:\Projects\aioptimizer\src\PromptOptimizer.Domain\obj\Debug\net10.0\PromptOptimizer.Domain.AssemblyInfo.cs
 E:\Projects\aioptimizer\src\PromptOptimizer.Domain\obj\Debug\net10.0\PromptOptimizer.Domain.csproj.CoreCompileInputs.cache
+E:\Projects\aioptimizer\src\PromptOptimizer.Domain\obj\Debug\net10.0\PromptOptimizer.Domain.sourcelink.json
 E:\Projects\aioptimizer\src\PromptOptimizer.Domain\obj\Debug\net10.0\PromptOptimizer.Domain.dll
 E:\Projects\aioptimizer\src\PromptOptimizer.Domain\obj\Debug\net10.0\refint\PromptOptimizer.Domain.dll
 E:\Projects\aioptimizer\src\PromptOptimizer.Domain\obj\Debug\net10.0\PromptOptimizer.Domain.pdb

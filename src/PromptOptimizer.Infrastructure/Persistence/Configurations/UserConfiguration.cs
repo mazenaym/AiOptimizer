@@ -4,10 +4,10 @@ using PromptOptimizer.Domain.Entities;
 
 namespace PromptOptimizer.Infrastructure.Persistence.Configurations;
 
-public class UserConfiguration : IEntityTypeConfiguration<User>
+public class UserConfiguration : IEntityTypeConfiguration<ApplicationUser>
 {
     public void Configure(
-        EntityTypeBuilder<User> builder)
+        EntityTypeBuilder<ApplicationUser> builder)
     {
         builder.ToTable("users");
 

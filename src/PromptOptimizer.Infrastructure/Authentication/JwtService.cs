@@ -66,10 +66,10 @@ public class JwtService : IJwtService
         return DateTime.UtcNow.AddMinutes(minutes);
     }
 
-    public string GenerateRefreshToken()
-    {
-        var randomBytes = RandomNumberGenerator.GetBytes(64);
+    //public string GenerateRefreshToken()
+    //{
+    //    var randomBytes = RandomNumberGenerator.GetBytes(64);
 
-        return Convert.ToBase64String(randomBytes);
-    }
+    //    return Convert.ToBase64String(randomBytes);
+    //}
 }

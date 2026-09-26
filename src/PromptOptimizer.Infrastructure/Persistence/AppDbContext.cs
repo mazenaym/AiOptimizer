@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using PromptOptimizer.Domain.Entities;
+using PromptOptimizer.Application.Common.Interfaces;
 
 namespace PromptOptimizer.Infrastructure.Persistence;
 

@@ -1,14 +1,9 @@
-﻿using PromptOptimizer.Domain.Entities;
-
+﻿
 namespace PromptOptimizer.Application.Auth.Interfaces;
 
 public interface IRefreshTokenService
 {
-    Task<RefreshToken> CreateAsync(
+    Task<string> CreateAsync(
         Guid userId,
-        CancellationToken cancellationToken);
-
-    Task SaveAsync(
-        RefreshToken refreshToken,
         CancellationToken cancellationToken);
 }

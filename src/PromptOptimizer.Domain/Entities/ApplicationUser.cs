@@ -22,4 +22,5 @@ public class ApplicationUser : IdentityUser<Guid>
     public ICollection<UsageRecord> UsageRecords { get; set; } = new List<UsageRecord>();
 
     public ICollection<Subscription> Subscriptions { get; set; } = new List<Subscription>();
+    public ICollection<RefreshToken> RefreshTokens { get; set; } = new List<RefreshToken>();
 }

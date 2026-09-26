@@ -4,6 +4,6 @@ namespace PromptOptimizer.Application.Common.Interfaces;
 
 public interface IJwtTokenGenerator
 {
-    string GenerateAccessToken(User user);
+    string GenerateAccessToken(ApplicationUser user);
     RefreshToken GenerateRefreshToken(Guid userId);
 }

@@ -2,7 +2,9 @@
 using Microsoft.AspNetCore.Identity;
 using PromptOptimizer.Application.Auth.DTOs;
 using PromptOptimizer.Application.Auth.Interfaces;
+using PromptOptimizer.Application.Common.Exceptions;
 using PromptOptimizer.Domain.Entities;
+using FluentValidation.Results;
 
 namespace PromptOptimizer.Application.Auth.Commands.Register;
 
@@ -38,8 +40,7 @@ public class RegisterCommandHandler
 
         if (existingUser is not null)
         {
-            throw new ApplicationException(
-                "Email is already registered.");
+            throw new ConflictException("Email is already registered.");
         }
 
         // 3. Create user
@@ -60,11 +61,13 @@ public class RegisterCommandHandler
 
         if (!result.Succeeded)
         {
-            var errors = string.Join(
-                ", ",
-                result.Errors.Select(x => x.Description));
+            var failures = result.Errors
+                .Select(error => new ValidationFailure(
+                    error.Code,
+                    error.Description))
+                .ToList();
 
-            throw new ApplicationException(errors);
+            throw new ValidationException(failures);
         }
 
         // 5. Generate access token

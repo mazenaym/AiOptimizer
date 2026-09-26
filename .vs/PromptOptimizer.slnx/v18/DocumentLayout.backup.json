@@ -3,44 +3,64 @@
   "WorkspaceRootPath": "E:\\Projects\\aioptimizer\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Infrastructure\\Migrations\\20260924111731_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\PromptOptimizer.Infrastructure\\Migrations\\20260924111731_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C0B4EEE3-020D-11B9-B61D-6B5CAE2BA0E3}|src\\PromptOptimizer.Infrastructure\\PromptOptimizer.Infrastructure.csproj|e:\\projects\\aioptimizer\\src\\promptoptimizer.infrastructure\\ai\\gemini\\geminiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C0B4EEE3-020D-11B9-B61D-6B5CAE2BA0E3}|src\\PromptOptimizer.Infrastructure\\PromptOptimizer.Infrastructure.csproj|solutionrelative:src\\promptoptimizer.infrastructure\\ai\\gemini\\geminiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C0B4EEE3-020D-11B9-B61D-6B5CAE2BA0E3}|src\\PromptOptimizer.Infrastructure\\PromptOptimizer.Infrastructure.csproj|e:\\projects\\aioptimizer\\src\\promptoptimizer.infrastructure\\ai\\ollama\\ollamaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C0B4EEE3-020D-11B9-B61D-6B5CAE2BA0E3}|src\\PromptOptimizer.Infrastructure\\PromptOptimizer.Infrastructure.csproj|solutionrelative:src\\promptoptimizer.infrastructure\\ai\\ollama\\ollamaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C0B4EEE3-020D-11B9-B61D-6B5CAE2BA0E3}|src\\PromptOptimizer.Infrastructure\\PromptOptimizer.Infrastructure.csproj|e:\\projects\\aioptimizer\\src\\promptoptimizer.infrastructure\\ai\\openrouter\\openrouterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C0B4EEE3-020D-11B9-B61D-6B5CAE2BA0E3}|src\\PromptOptimizer.Infrastructure\\PromptOptimizer.Infrastructure.csproj|solutionrelative:src\\promptoptimizer.infrastructure\\ai\\openrouter\\openrouterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C0B4EEE3-020D-11B9-B61D-6B5CAE2BA0E3}|src\\PromptOptimizer.Infrastructure\\PromptOptimizer.Infrastructure.csproj|e:\\projects\\aioptimizer\\src\\promptoptimizer.infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C0B4EEE3-020D-11B9-B61D-6B5CAE2BA0E3}|src\\PromptOptimizer.Infrastructure\\PromptOptimizer.Infrastructure.csproj|solutionrelative:src\\promptoptimizer.infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FCBDBE43-2B7D-DAC6-43E8-7707DF917F18}|src\\PromptOptimizer.Application\\PromptOptimizer.Application.csproj|e:\\projects\\aioptimizer\\src\\promptoptimizer.application\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FCBDBE43-2B7D-DAC6-43E8-7707DF917F18}|src\\PromptOptimizer.Application\\PromptOptimizer.Application.csproj|solutionrelative:src\\promptoptimizer.application\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C0B4EEE3-020D-11B9-B61D-6B5CAE2BA0E3}|src\\PromptOptimizer.Infrastructure\\PromptOptimizer.Infrastructure.csproj|e:\\projects\\aioptimizer\\src\\promptoptimizer.infrastructure\\ai\\aiservicefactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C0B4EEE3-020D-11B9-B61D-6B5CAE2BA0E3}|src\\PromptOptimizer.Infrastructure\\PromptOptimizer.Infrastructure.csproj|solutionrelative:src\\promptoptimizer.infrastructure\\ai\\aiservicefactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8C5E99A3-8498-6027-17F4-3B04E549714F}|src\\PromptOptimizer.Api\\PromptOptimizer.Api.csproj|e:\\projects\\aioptimizer\\src\\promptoptimizer.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8C5E99A3-8498-6027-17F4-3B04E549714F}|src\\PromptOptimizer.Api\\PromptOptimizer.Api.csproj|solutionrelative:src\\promptoptimizer.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FCBDBE43-2B7D-DAC6-43E8-7707DF917F18}|src\\PromptOptimizer.Application\\PromptOptimizer.Application.csproj|e:\\projects\\aioptimizer\\src\\promptoptimizer.application\\prompts\\commands\\deleteprompt\\deletepromptcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FCBDBE43-2B7D-DAC6-43E8-7707DF917F18}|src\\PromptOptimizer.Application\\PromptOptimizer.Application.csproj|solutionrelative:src\\promptoptimizer.application\\prompts\\commands\\deleteprompt\\deletepromptcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8C5E99A3-8498-6027-17F4-3B04E549714F}|src\\PromptOptimizer.Api\\PromptOptimizer.Api.csproj|e:\\projects\\aioptimizer\\src\\promptoptimizer.api\\middleware\\exceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C5E99A3-8498-6027-17F4-3B04E549714F}|src\\PromptOptimizer.Api\\PromptOptimizer.Api.csproj|solutionrelative:src\\promptoptimizer.api\\middleware\\exceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FCBDBE43-2B7D-DAC6-43E8-7707DF917F18}|src\\PromptOptimizer.Application\\PromptOptimizer.Application.csproj|e:\\projects\\aioptimizer\\src\\promptoptimizer.application\\auth\\commands\\login\\logincommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FCBDBE43-2B7D-DAC6-43E8-7707DF917F18}|src\\PromptOptimizer.Application\\PromptOptimizer.Application.csproj|solutionrelative:src\\promptoptimizer.application\\auth\\commands\\login\\logincommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C5E99A3-8498-6027-17F4-3B04E549714F}|src\\PromptOptimizer.Api\\PromptOptimizer.Api.csproj|e:\\projects\\aioptimizer\\src\\promptoptimizer.api\\extensions\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C5E99A3-8498-6027-17F4-3B04E549714F}|src\\PromptOptimizer.Api\\PromptOptimizer.Api.csproj|solutionrelative:src\\promptoptimizer.api\\extensions\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C5E99A3-8498-6027-17F4-3B04E549714F}|src\\PromptOptimizer.Api\\PromptOptimizer.Api.csproj|e:\\projects\\aioptimizer\\src\\promptoptimizer.api\\contracts\\apierrorresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C5E99A3-8498-6027-17F4-3B04E549714F}|src\\PromptOptimizer.Api\\PromptOptimizer.Api.csproj|solutionrelative:src\\promptoptimizer.api\\contracts\\apierrorresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FCBDBE43-2B7D-DAC6-43E8-7707DF917F18}|src\\PromptOptimizer.Application\\PromptOptimizer.Application.csproj|e:\\projects\\aioptimizer\\src\\promptoptimizer.application\\auth\\commands\\register\\registercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FCBDBE43-2B7D-DAC6-43E8-7707DF917F18}|src\\PromptOptimizer.Application\\PromptOptimizer.Application.csproj|solutionrelative:src\\promptoptimizer.application\\auth\\commands\\register\\registercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FCBDBE43-2B7D-DAC6-43E8-7707DF917F18}|src\\PromptOptimizer.Application\\PromptOptimizer.Application.csproj|e:\\projects\\aioptimizer\\src\\promptoptimizer.application\\auth\\commands\\register\\registercommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FCBDBE43-2B7D-DAC6-43E8-7707DF917F18}|src\\PromptOptimizer.Application\\PromptOptimizer.Application.csproj|solutionrelative:src\\promptoptimizer.application\\auth\\commands\\register\\registercommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FCBDBE43-2B7D-DAC6-43E8-7707DF917F18}|src\\PromptOptimizer.Application\\PromptOptimizer.Application.csproj|e:\\projects\\aioptimizer\\src\\promptoptimizer.application\\auth\\commands\\login\\logincommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FCBDBE43-2B7D-DAC6-43E8-7707DF917F18}|src\\PromptOptimizer.Application\\PromptOptimizer.Application.csproj|solutionrelative:src\\promptoptimizer.application\\auth\\commands\\login\\logincommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FCBDBE43-2B7D-DAC6-43E8-7707DF917F18}|src\\PromptOptimizer.Application\\PromptOptimizer.Application.csproj|e:\\projects\\aioptimizer\\src\\promptoptimizer.application\\common\\interfaces\\iappdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FCBDBE43-2B7D-DAC6-43E8-7707DF917F18}|src\\PromptOptimizer.Application\\PromptOptimizer.Application.csproj|solutionrelative:src\\promptoptimizer.application\\common\\interfaces\\iappdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C0B4EEE3-020D-11B9-B61D-6B5CAE2BA0E3}|src\\PromptOptimizer.Infrastructure\\PromptOptimizer.Infrastructure.csproj|e:\\projects\\aioptimizer\\src\\promptoptimizer.infrastructure\\persistence\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C0B4EEE3-020D-11B9-B61D-6B5CAE2BA0E3}|src\\PromptOptimizer.Infrastructure\\PromptOptimizer.Infrastructure.csproj|solutionrelative:src\\promptoptimizer.infrastructure\\persistence\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FCBDBE43-2B7D-DAC6-43E8-7707DF917F18}|src\\PromptOptimizer.Application\\PromptOptimizer.Application.csproj|e:\\projects\\aioptimizer\\src\\promptoptimizer.application\\common\\behaviors\\loggingbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FCBDBE43-2B7D-DAC6-43E8-7707DF917F18}|src\\PromptOptimizer.Application\\PromptOptimizer.Application.csproj|solutionrelative:src\\promptoptimizer.application\\common\\behaviors\\loggingbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FCBDBE43-2B7D-DAC6-43E8-7707DF917F18}|src\\PromptOptimizer.Application\\PromptOptimizer.Application.csproj|e:\\projects\\aioptimizer\\src\\promptoptimizer.application\\common\\exceptions\\validationexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FCBDBE43-2B7D-DAC6-43E8-7707DF917F18}|src\\PromptOptimizer.Application\\PromptOptimizer.Application.csproj|solutionrelative:src\\promptoptimizer.application\\common\\exceptions\\validationexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FCBDBE43-2B7D-DAC6-43E8-7707DF917F18}|src\\PromptOptimizer.Application\\PromptOptimizer.Application.csproj|e:\\projects\\aioptimizer\\src\\promptoptimizer.application\\common\\behaviors\\validationbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FCBDBE43-2B7D-DAC6-43E8-7707DF917F18}|src\\PromptOptimizer.Application\\PromptOptimizer.Application.csproj|solutionrelative:src\\promptoptimizer.application\\common\\behaviors\\validationbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FCBDBE43-2B7D-DAC6-43E8-7707DF917F18}|src\\PromptOptimizer.Application\\PromptOptimizer.Application.csproj|e:\\projects\\aioptimizer\\src\\promptoptimizer.application\\common\\exceptions\\conflictexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FCBDBE43-2B7D-DAC6-43E8-7707DF917F18}|src\\PromptOptimizer.Application\\PromptOptimizer.Application.csproj|solutionrelative:src\\promptoptimizer.application\\common\\exceptions\\conflictexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C5E99A3-8498-6027-17F4-3B04E549714F}|src\\PromptOptimizer.Api\\PromptOptimizer.Api.csproj|e:\\projects\\aioptimizer\\src\\promptoptimizer.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{8C5E99A3-8498-6027-17F4-3B04E549714F}|src\\PromptOptimizer.Api\\PromptOptimizer.Api.csproj|solutionrelative:src\\promptoptimizer.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,136 +70,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 18,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "20260924111731_InitialCreate.cs",
-              "DocumentMoniker": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Infrastructure\\Migrations\\20260924111731_InitialCreate.cs",
-              "RelativeDocumentMoniker": "src\\PromptOptimizer.Infrastructure\\Migrations\\20260924111731_InitialCreate.cs",
-              "ToolTip": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Infrastructure\\Migrations\\20260924111731_InitialCreate.cs",
-              "RelativeToolTip": "src\\PromptOptimizer.Infrastructure\\Migrations\\20260924111731_InitialCreate.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAowBYAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-24T11:17:31.485Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "GeminiService.cs",
-              "DocumentMoniker": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Infrastructure\\AI\\Gemini\\GeminiService.cs",
-              "RelativeDocumentMoniker": "src\\PromptOptimizer.Infrastructure\\AI\\Gemini\\GeminiService.cs",
-              "ToolTip": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Infrastructure\\AI\\Gemini\\GeminiService.cs",
-              "RelativeToolTip": "src\\PromptOptimizer.Infrastructure\\AI\\Gemini\\GeminiService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAABaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-24T11:16:57.137Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "OllamaService.cs",
-              "DocumentMoniker": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Infrastructure\\AI\\Ollama\\OllamaService.cs",
-              "RelativeDocumentMoniker": "src\\PromptOptimizer.Infrastructure\\AI\\Ollama\\OllamaService.cs",
-              "ToolTip": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Infrastructure\\AI\\Ollama\\OllamaService.cs",
-              "RelativeToolTip": "src\\PromptOptimizer.Infrastructure\\AI\\Ollama\\OllamaService.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAswC8AAAAwAAAAAAAAAA==",
+              "Title": "LoginCommandValidator.cs",
+              "DocumentMoniker": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Application\\Auth\\Commands\\Login\\LoginCommandValidator.cs",
+              "RelativeDocumentMoniker": "src\\PromptOptimizer.Application\\Auth\\Commands\\Login\\LoginCommandValidator.cs",
+              "ToolTip": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Application\\Auth\\Commands\\Login\\LoginCommandValidator.cs",
+              "RelativeToolTip": "src\\PromptOptimizer.Application\\Auth\\Commands\\Login\\LoginCommandValidator.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAgwBsAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-24T11:16:49.269Z",
+              "WhenOpened": "2026-09-26T05:18:40.945Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "OpenRouterService.cs",
-              "DocumentMoniker": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Infrastructure\\AI\\OpenRouter\\OpenRouterService.cs",
-              "RelativeDocumentMoniker": "src\\PromptOptimizer.Infrastructure\\AI\\OpenRouter\\OpenRouterService.cs",
-              "ToolTip": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Infrastructure\\AI\\OpenRouter\\OpenRouterService.cs",
-              "RelativeToolTip": "src\\PromptOptimizer.Infrastructure\\AI\\OpenRouter\\OpenRouterService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-24T11:16:38.134Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AIServiceFactory.cs",
-              "DocumentMoniker": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Infrastructure\\AI\\AIServiceFactory.cs",
-              "RelativeDocumentMoniker": "src\\PromptOptimizer.Infrastructure\\AI\\AIServiceFactory.cs",
-              "ToolTip": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Infrastructure\\AI\\AIServiceFactory.cs",
-              "RelativeToolTip": "src\\PromptOptimizer.Infrastructure\\AI\\AIServiceFactory.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-24T11:16:12.554Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "DeletePromptCommand.cs",
-              "DocumentMoniker": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Application\\Prompts\\Commands\\DeletePrompt\\DeletePromptCommand.cs",
-              "RelativeDocumentMoniker": "src\\PromptOptimizer.Application\\Prompts\\Commands\\DeletePrompt\\DeletePromptCommand.cs",
-              "ToolTip": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Application\\Prompts\\Commands\\DeletePrompt\\DeletePromptCommand.cs",
-              "RelativeToolTip": "src\\PromptOptimizer.Application\\Prompts\\Commands\\DeletePrompt\\DeletePromptCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-24T11:02:04.56Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Infrastructure\\Persistence\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "src\\PromptOptimizer.Infrastructure\\Persistence\\AppDbContext.cs",
-              "ToolTip": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Infrastructure\\Persistence\\AppDbContext.cs",
-              "RelativeToolTip": "src\\PromptOptimizer.Infrastructure\\Persistence\\AppDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-24T10:43:32.094Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "DependencyInjection.cs",
-              "DocumentMoniker": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Application\\DependencyInjection.cs",
-              "RelativeDocumentMoniker": "src\\PromptOptimizer.Application\\DependencyInjection.cs",
-              "ToolTip": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Application\\DependencyInjection.cs",
-              "RelativeToolTip": "src\\PromptOptimizer.Application\\DependencyInjection.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "DocumentMoniker": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Api\\Extensions\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "src\\PromptOptimizer.Api\\Extensions\\DependencyInjection.cs",
+              "ToolTip": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Api\\Extensions\\DependencyInjection.cs",
+              "RelativeToolTip": "src\\PromptOptimizer.Api\\Extensions\\DependencyInjection.cs",
+              "ViewState": "AgIAAIQAAAAAAAAAAAAiwJ0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-24T10:39:36.087Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "DependencyInjection.cs",
-              "DocumentMoniker": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Infrastructure\\DependencyInjection.cs",
-              "RelativeDocumentMoniker": "src\\PromptOptimizer.Infrastructure\\DependencyInjection.cs",
-              "ToolTip": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Infrastructure\\DependencyInjection.cs",
-              "RelativeToolTip": "src\\PromptOptimizer.Infrastructure\\DependencyInjection.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-24T10:33:52.943Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Api\\Program.cs",
-              "RelativeDocumentMoniker": "src\\PromptOptimizer.Api\\Program.cs",
-              "ToolTip": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Api\\Program.cs",
-              "RelativeToolTip": "src\\PromptOptimizer.Api\\Program.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAIwC0AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-24T10:33:07.85Z",
+              "WhenOpened": "2026-09-26T05:17:47.486Z",
               "EditorCaption": ""
             },
             {
@@ -197,6 +113,169 @@
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ApiErrorResponse.cs",
+              "DocumentMoniker": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Api\\Contracts\\ApiErrorResponse.cs",
+              "RelativeDocumentMoniker": "src\\PromptOptimizer.Api\\Contracts\\ApiErrorResponse.cs",
+              "ToolTip": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Api\\Contracts\\ApiErrorResponse.cs",
+              "RelativeToolTip": "src\\PromptOptimizer.Api\\Contracts\\ApiErrorResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-26T05:17:14.943Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "RegisterCommandValidator.cs",
+              "DocumentMoniker": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Application\\Auth\\Commands\\Register\\RegisterCommandValidator.cs",
+              "RelativeDocumentMoniker": "src\\PromptOptimizer.Application\\Auth\\Commands\\Register\\RegisterCommandValidator.cs",
+              "ToolTip": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Application\\Auth\\Commands\\Register\\RegisterCommandValidator.cs",
+              "RelativeToolTip": "src\\PromptOptimizer.Application\\Auth\\Commands\\Register\\RegisterCommandValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-26T04:47:26.479Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LoginCommandHandler.cs",
+              "DocumentMoniker": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Application\\Auth\\Commands\\Login\\LoginCommandHandler.cs",
+              "RelativeDocumentMoniker": "src\\PromptOptimizer.Application\\Auth\\Commands\\Login\\LoginCommandHandler.cs",
+              "ToolTip": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Application\\Auth\\Commands\\Login\\LoginCommandHandler.cs",
+              "RelativeToolTip": "src\\PromptOptimizer.Application\\Auth\\Commands\\Login\\LoginCommandHandler.cs",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAYwEYAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-26T04:45:39.297Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ExceptionMiddleware.cs",
+              "DocumentMoniker": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Api\\Middleware\\ExceptionMiddleware.cs",
+              "RelativeDocumentMoniker": "src\\PromptOptimizer.Api\\Middleware\\ExceptionMiddleware.cs",
+              "ToolTip": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Api\\Middleware\\ExceptionMiddleware.cs",
+              "RelativeToolTip": "src\\PromptOptimizer.Api\\Middleware\\ExceptionMiddleware.cs",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAgwF0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-26T04:44:52.548Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Infrastructure\\Persistence\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "src\\PromptOptimizer.Infrastructure\\Persistence\\AppDbContext.cs",
+              "ToolTip": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Infrastructure\\Persistence\\AppDbContext.cs",
+              "RelativeToolTip": "src\\PromptOptimizer.Infrastructure\\Persistence\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-26T04:28:20.44Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IAppDbContext.cs",
+              "DocumentMoniker": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Application\\Common\\Interfaces\\IAppDbContext.cs",
+              "RelativeDocumentMoniker": "src\\PromptOptimizer.Application\\Common\\Interfaces\\IAppDbContext.cs",
+              "ToolTip": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Application\\Common\\Interfaces\\IAppDbContext.cs",
+              "RelativeToolTip": "src\\PromptOptimizer.Application\\Common\\Interfaces\\IAppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-26T04:25:40.261Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "LoggingBehavior.cs",
+              "DocumentMoniker": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Application\\Common\\Behaviors\\LoggingBehavior.cs",
+              "RelativeDocumentMoniker": "src\\PromptOptimizer.Application\\Common\\Behaviors\\LoggingBehavior.cs",
+              "ToolTip": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Application\\Common\\Behaviors\\LoggingBehavior.cs",
+              "RelativeToolTip": "src\\PromptOptimizer.Application\\Common\\Behaviors\\LoggingBehavior.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAuwDIAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-26T03:33:46.939Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ValidationBehavior.cs",
+              "DocumentMoniker": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Application\\Common\\Behaviors\\ValidationBehavior.cs",
+              "RelativeDocumentMoniker": "src\\PromptOptimizer.Application\\Common\\Behaviors\\ValidationBehavior.cs",
+              "ToolTip": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Application\\Common\\Behaviors\\ValidationBehavior.cs",
+              "RelativeToolTip": "src\\PromptOptimizer.Application\\Common\\Behaviors\\ValidationBehavior.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAA+wB4AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-25T23:51:54.695Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ConflictException.cs",
+              "DocumentMoniker": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Application\\Common\\Exceptions\\ConflictException.cs",
+              "RelativeDocumentMoniker": "src\\PromptOptimizer.Application\\Common\\Exceptions\\ConflictException.cs",
+              "ToolTip": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Application\\Common\\Exceptions\\ConflictException.cs",
+              "RelativeToolTip": "src\\PromptOptimizer.Application\\Common\\Exceptions\\ConflictException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-25T23:45:10.765Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ValidationException.cs",
+              "DocumentMoniker": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Application\\Common\\Exceptions\\ValidationException.cs",
+              "RelativeDocumentMoniker": "src\\PromptOptimizer.Application\\Common\\Exceptions\\ValidationException.cs",
+              "ToolTip": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Application\\Common\\Exceptions\\ValidationException.cs",
+              "RelativeToolTip": "src\\PromptOptimizer.Application\\Common\\Exceptions\\ValidationException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-25T23:43:26.328Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RegisterCommandHandler.cs",
+              "DocumentMoniker": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Application\\Auth\\Commands\\Register\\RegisterCommandHandler.cs",
+              "RelativeDocumentMoniker": "src\\PromptOptimizer.Application\\Auth\\Commands\\Register\\RegisterCommandHandler.cs",
+              "ToolTip": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Application\\Auth\\Commands\\Register\\RegisterCommandHandler.cs",
+              "RelativeToolTip": "src\\PromptOptimizer.Application\\Auth\\Commands\\Register\\RegisterCommandHandler.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAewEUAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-25T23:29:06.869Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Api\\appsettings.json",
+              "RelativeDocumentMoniker": "src\\PromptOptimizer.Api\\appsettings.json",
+              "ToolTip": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Api\\appsettings.json",
+              "RelativeToolTip": "src\\PromptOptimizer.Api\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-09-25T23:28:25.966Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Api\\Program.cs",
+              "RelativeDocumentMoniker": "src\\PromptOptimizer.Api\\Program.cs",
+              "ToolTip": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Api\\Program.cs",
+              "RelativeToolTip": "src\\PromptOptimizer.Api\\Program.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAAACQAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-25T18:36:39.063Z",
+              "EditorCaption": ""
             }
           ]
         }

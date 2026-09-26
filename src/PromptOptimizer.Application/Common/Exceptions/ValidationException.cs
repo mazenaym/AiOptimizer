@@ -4,19 +4,17 @@ namespace PromptOptimizer.Application.Common.Exceptions;
 
 public class ValidationException : Exception
 {
-    public IDictionary<string, string[]> Errors { get; }
-
-    public ValidationException()
-        : base("One or more validation failures have occurred.")
-    {
-        Errors = new Dictionary<string, string[]>();
-    }
+    public IReadOnlyDictionary<string, string[]> Errors { get; }
 
     public ValidationException(IEnumerable<ValidationFailure> failures)
-        : this()
+        : base("One or more validation errors occurred.")
     {
         Errors = failures
-            .GroupBy(e => e.PropertyName, e => e.ErrorMessage)
-            .ToDictionary(failureGroup => failureGroup.Key, failureGroup => failureGroup.ToArray());
+            .GroupBy(x => x.PropertyName)
+            .ToDictionary(
+                group => group.Key,
+                group => group
+                    .Select(x => x.ErrorMessage)
+                    .ToArray());
     }
 }

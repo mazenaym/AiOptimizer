@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using PromptOptimizer.Application.Auth.DTOs;
 using PromptOptimizer.Application.Auth.Interfaces;
 using PromptOptimizer.Domain.Entities;
+using PromptOptimizer.Application.Common.Exceptions;
 
 namespace PromptOptimizer.Application.Auth.Commands.Login;
 
@@ -41,14 +42,14 @@ public class LoginCommandHandler
 
         if (user is null)
         {
-            throw new UnauthorizedAccessException(
+            throw new UnauthorizedException(
                 "Invalid email or password.");
         }
 
         // 3. Check account status
         if (!user.IsActive)
         {
-            throw new UnauthorizedAccessException(
+            throw new UnauthorizedException(
                 "This account is inactive.");
         }
 
@@ -61,13 +62,13 @@ public class LoginCommandHandler
 
         if (result.IsLockedOut)
         {
-            throw new UnauthorizedAccessException(
+            throw new UnauthorizedException(
                 "Account is temporarily locked.");
         }
 
         if (!result.Succeeded)
         {
-            throw new UnauthorizedAccessException(
+            throw new UnauthorizedException(
                 "Invalid email or password.");
         }
 

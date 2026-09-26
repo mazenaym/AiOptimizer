@@ -1,5 +1,4 @@
-using System.Net;
-using System.Text.Json;
+using PromptOptimizer.Api.Contracts;
 using PromptOptimizer.Application.Common.Exceptions;
 
 namespace PromptOptimizer.Api.Middleware;
@@ -9,51 +8,100 @@ public class ExceptionMiddleware
     private readonly RequestDelegate _next;
     private readonly ILogger<ExceptionMiddleware> _logger;
 
-    public ExceptionMiddleware(RequestDelegate next, ILogger<ExceptionMiddleware> logger)
+    public ExceptionMiddleware(
+        RequestDelegate next,
+        ILogger<ExceptionMiddleware> logger)
     {
         _next = next;
         _logger = logger;
     }
 
-    public async Task InvokeAsync(HttpContext httpContext)
+    public async Task InvokeAsync(HttpContext context)
     {
         try
         {
-            await _next(httpContext);
+            await _next(context);
         }
-        catch (Exception ex)
+        catch (Exception exception)
         {
-            _logger.LogError(ex, "An unhandled exception occurred: {Message}", ex.Message);
-            await HandleExceptionAsync(httpContext, ex);
+            // لا يمكن تغيير الاستجابة بعد بدء إرسالها.
+            if (context.Response.HasStarted)
+            {
+                throw;
+            }
+
+            await HandleExceptionAsync(context, exception);
         }
     }
 
-    private static Task HandleExceptionAsync(HttpContext context, Exception exception)
+    private async Task HandleExceptionAsync(
+        HttpContext context,
+        Exception exception)
     {
-        context.Response.ContentType = "application/json";
+        var statusCode = StatusCodes.Status500InternalServerError;
 
-        var statusCode = HttpStatusCode.InternalServerError;
-        var response = new Dictionary<string, object>
-        {
-            { "message", exception.Message }
-        };
+        var message =
+            "An unexpected error occurred. Please try again later.";
+
+        IReadOnlyDictionary<string, string[]>? errors = null;
 
         switch (exception)
         {
-            case ValidationException validationException:
-                statusCode = HttpStatusCode.BadRequest;
-                response["errors"] = validationException.Errors;
+            case ConflictException conflict:
+                statusCode = StatusCodes.Status409Conflict;
+                message = conflict.Message;
                 break;
-            case NotFoundException:
-                statusCode = HttpStatusCode.NotFound;
+
+            case ValidationException validation:
+                statusCode = StatusCodes.Status400BadRequest;
+                message = validation.Message;
+                errors = validation.Errors;
                 break;
-            case UnauthorizedException:
-                statusCode = HttpStatusCode.Unauthorized;
+
+            case UnauthorizedException unauthorized:
+                statusCode = StatusCodes.Status401Unauthorized;
+                message = unauthorized.Message;
+                break;
+
+            case NotFoundException notFound:
+                statusCode = StatusCodes.Status404NotFound;
+                message = notFound.Message;
                 break;
         }
 
-        context.Response.StatusCode = (int)statusCode;
-        var result = JsonSerializer.Serialize(response);
-        return context.Response.WriteAsync(result);
+        if (statusCode == StatusCodes.Status500InternalServerError)
+        {
+            _logger.LogError(
+                exception,
+                "Unexpected error. TraceId: {TraceId}",
+                context.TraceIdentifier);
+        }
+        else
+        {
+            _logger.LogWarning(
+                "Request rejected with status {StatusCode}. " +
+                "ExceptionType: {ExceptionType}. TraceId: {TraceId}",
+                statusCode,
+                exception.GetType().Name,
+                context.TraceIdentifier);
+        }
+
+        var response = new ApiErrorResponse(
+    statusCode,
+    message,
+    errors,
+    context.TraceIdentifier);
+
+        context.Response.Clear();
+        context.Response.StatusCode = statusCode;
+
+        if (statusCode == StatusCodes.Status401Unauthorized)
+        {
+            context.Response.Headers["WWW-Authenticate"] = "Bearer";
+        }
+
+        await context.Response.WriteAsJsonAsync(
+            response,
+            cancellationToken: context.RequestAborted);
     }
 }
