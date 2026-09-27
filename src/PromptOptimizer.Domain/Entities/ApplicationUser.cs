@@ -1,4 +1,3 @@
-using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNetCore.Identity;
 using PromptOptimizer.Domain.Common;
 using PromptOptimizer.Domain.Enums;

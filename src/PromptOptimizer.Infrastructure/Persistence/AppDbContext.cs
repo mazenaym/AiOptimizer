@@ -7,7 +7,8 @@ using PromptOptimizer.Application.Common.Interfaces;
 namespace PromptOptimizer.Infrastructure.Persistence;
 
 public class AppDbContext
-    : IdentityDbContext<ApplicationUser, IdentityRole<Guid>, Guid>
+    : IdentityDbContext<ApplicationUser, IdentityRole<Guid>, Guid>,
+      IAppDbContext
 {
     public AppDbContext(
         DbContextOptions<AppDbContext> options)

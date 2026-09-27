@@ -15,7 +15,6 @@
   <ItemGroup>
     <Folder Include="Auth\Commands\Logout\" />
     <Folder Include="Auth\Commands\RefreshToken\" />
-    <Folder Include="Prompts\Commands\DeletePrompt\" />
   </ItemGroup>
 
   <PropertyGroup>

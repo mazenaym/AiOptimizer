@@ -1,15 +1,18 @@
-using PromptOptimizer.Domain.Enums;
-
 namespace PromptOptimizer.Application.Prompts.DTOs;
 
-public record PromptDto(
+public sealed record PromptDto(
     Guid Id,
-    Guid UserId,
-    string Title,
-    string Content,
-    PromptCategory Category,
-    bool IsFavorite,
-    List<string> Tags,
-    DateTime CreatedAt,
-    DateTime? LastModifiedAt
-);
+    string? Title,
+    string OriginalContent,
+    Guid? CategoryId,
+    string? Language,
+    bool IsSaved,
+    DateTime CreatedAt);
+
+public sealed record PromptListItemDto(
+    Guid Id,
+    string? Title,
+    Guid? CategoryId,
+    string? Language,
+    bool IsSaved,
+    DateTime CreatedAt);

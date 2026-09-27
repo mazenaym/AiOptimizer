@@ -1,26 +1,34 @@
-//using MediatR;
-//using Microsoft.AspNetCore.Authorization;
-//using Microsoft.AspNetCore.Mvc;
-//using PromptOptimizer.Application.Models.Queries;
+using MediatR;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using PromptOptimizer.Application.Models.DTOs;
+using PromptOptimizer.Application.Models.Queries;
 
-//namespace PromptOptimizer.Api.Controllers;
+namespace PromptOptimizer.Api.Controllers;
 
-//[Authorize]
-//[ApiController]
-//[Route("api/[controller]")]
-//public class ModelsController : ControllerBase
-//{
-//    private readonly ISender _sender;
+[Authorize]
+[ApiController]
+[Route("api/models")]
+public sealed class ModelsController : ControllerBase
+{
+    private readonly ISender _sender;
 
-//    public ModelsController(ISender sender)
-//    {
-//        _sender = sender;
-//    }
+    public ModelsController(ISender sender)
+    {
+        _sender = sender;
+    }
 
-//    [HttpGet]
-//    public async Task<IActionResult> GetModels()
-//    {
-//        var result = await _sender.Send(new GetAvailableModelsQuery());
-//        return result.IsSuccess ? Ok(result.Value) : BadRequest(new { error = result.Error });
-//    }
-//}
+    [HttpGet]
+    [ProducesResponseType(
+        typeof(List<AIModelDto>),
+        StatusCodes.Status200OK)]
+    public async Task<ActionResult<List<AIModelDto>>> Get(
+        CancellationToken cancellationToken)
+    {
+        var result = await _sender.Send(
+            new GetAvailableModelsQuery(),
+            cancellationToken);
+
+        return Ok(result);
+    }
+}

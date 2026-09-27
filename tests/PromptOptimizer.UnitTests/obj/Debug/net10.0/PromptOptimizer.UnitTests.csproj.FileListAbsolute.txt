@@ -10,15 +10,11 @@ E:\Projects\aioptimizer\tests\PromptOptimizer.UnitTests\bin\Debug\net10.0\Prompt
 E:\Projects\aioptimizer\tests\PromptOptimizer.UnitTests\bin\Debug\net10.0\PromptOptimizer.UnitTests.pdb
 E:\Projects\aioptimizer\tests\PromptOptimizer.UnitTests\bin\Debug\net10.0\BCrypt-Net-Next.dll
 E:\Projects\aioptimizer\tests\PromptOptimizer.UnitTests\bin\Debug\net10.0\Castle.Core.dll
-E:\Projects\aioptimizer\tests\PromptOptimizer.UnitTests\bin\Debug\net10.0\EntityFramework.SqlServer.dll
-E:\Projects\aioptimizer\tests\PromptOptimizer.UnitTests\bin\Debug\net10.0\EntityFramework.dll
 E:\Projects\aioptimizer\tests\PromptOptimizer.UnitTests\bin\Debug\net10.0\FluentAssertions.dll
 E:\Projects\aioptimizer\tests\PromptOptimizer.UnitTests\bin\Debug\net10.0\FluentValidation.dll
 E:\Projects\aioptimizer\tests\PromptOptimizer.UnitTests\bin\Debug\net10.0\FluentValidation.DependencyInjectionExtensions.dll
 E:\Projects\aioptimizer\tests\PromptOptimizer.UnitTests\bin\Debug\net10.0\MediatR.dll
 E:\Projects\aioptimizer\tests\PromptOptimizer.UnitTests\bin\Debug\net10.0\MediatR.Contracts.dll
-E:\Projects\aioptimizer\tests\PromptOptimizer.UnitTests\bin\Debug\net10.0\Microsoft.AspNet.Identity.Core.dll
-E:\Projects\aioptimizer\tests\PromptOptimizer.UnitTests\bin\Debug\net10.0\Microsoft.AspNet.Identity.EntityFramework.dll
 E:\Projects\aioptimizer\tests\PromptOptimizer.UnitTests\bin\Debug\net10.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 E:\Projects\aioptimizer\tests\PromptOptimizer.UnitTests\bin\Debug\net10.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 E:\Projects\aioptimizer\tests\PromptOptimizer.UnitTests\bin\Debug\net10.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll

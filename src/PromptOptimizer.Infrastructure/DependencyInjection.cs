@@ -26,7 +26,8 @@ public static class DependencyInjection
         services.AddDbContext<AppDbContext>(options =>
             options.UseNpgsql(connectionString));
 
-        services.AddScoped<IAppDbContext>(provider => (IAppDbContext)provider.GetRequiredService<AppDbContext>());
+        services.AddScoped<IAppDbContext>(provider =>
+    provider.GetRequiredService<AppDbContext>());
 
         // Auth & Security
         services.AddScoped<IJwtService, JwtService>();

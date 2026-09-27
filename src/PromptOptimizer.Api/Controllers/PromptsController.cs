@@ -1,58 +1,86 @@
-//using MediatR;
-//using Microsoft.AspNetCore.Authorization;
-//using Microsoft.AspNetCore.Mvc;
-//using PromptOptimizer.Application.Prompts.Commands.DeletePrompt;
-//using PromptOptimizer.Application.Prompts.Commands.OptimizePrompt;
-//using PromptOptimizer.Application.Prompts.Commands.SavePrompt;
-//using PromptOptimizer.Application.Prompts.Queries.GetPrompt;
-//using PromptOptimizer.Application.Prompts.Queries.GetPromptHistory;
+using MediatR;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using PromptOptimizer.Application.Common.Models;
+using PromptOptimizer.Application.Prompts.Commands.CreatePrompt;
+using PromptOptimizer.Application.Prompts.Commands.DeletePrompt;
+using PromptOptimizer.Application.Prompts.DTOs;
+using PromptOptimizer.Application.Prompts.Queries.GetPrompt;
+using PromptOptimizer.Application.Prompts.Queries.GetPrompts;
 
-//namespace PromptOptimizer.Api.Controllers;
+namespace PromptOptimizer.Api.Controllers;
 
-//[Authorize]
-//[ApiController]
-//[Route("api/[controller]")]
-//public class PromptsController : ControllerBase
-//{
-//    private readonly ISender _sender;
+[Authorize]
+[ApiController]
+[Route("api/prompts")]
+public sealed class PromptsController : ControllerBase
+{
+    private readonly ISender _sender;
 
-//    public PromptsController(ISender sender)
-//    {
-//        _sender = sender;
-//    }
+    public PromptsController(ISender sender)
+    {
+        _sender = sender;
+    }
 
-//    [HttpPost("optimize")]
-//    public async Task<IActionResult> Optimize([FromBody] OptimizePromptCommand command)
-//    {
-//        var result = await _sender.Send(command);
-//        return result.IsSuccess ? Ok(result.Value) : BadRequest(new { error = result.Error });
-//    }
+    [HttpPost]
+    [ProducesResponseType(
+        typeof(PromptDto),
+        StatusCodes.Status201Created)]
+    public async Task<ActionResult<PromptDto>> Create(
+        [FromBody] CreatePromptCommand command,
+        CancellationToken cancellationToken)
+    {
+        var result = await _sender.Send(
+            command,
+            cancellationToken);
 
-//    [HttpPost]
-//    public async Task<IActionResult> Save([FromBody] SavePromptCommand command)
-//    {
-//        var result = await _sender.Send(command);
-//        return result.IsSuccess ? Ok(result.Value) : BadRequest(new { error = result.Error });
-//    }
+        return CreatedAtAction(
+            nameof(GetById),
+            new { id = result.Id },
+            result);
+    }
 
-//    [HttpGet("{id:guid}")]
-//    public async Task<IActionResult> GetById(Guid id)
-//    {
-//        var result = await _sender.Send(new GetPromptQuery(id));
-//        return result.IsSuccess ? Ok(result.Value) : NotFound(new { error = result.Error });
-//    }
+    [HttpGet]
+    [ProducesResponseType(
+        typeof(PagedResult<PromptListItemDto>),
+        StatusCodes.Status200OK)]
+    public async Task<ActionResult<PagedResult<PromptListItemDto>>> GetAll(
+        CancellationToken cancellationToken,
+        [FromQuery] int pageNumber = 1,
+        [FromQuery] int pageSize = 20)
+    {
+        var result = await _sender.Send(
+            new GetPromptsQuery(pageNumber, pageSize),
+            cancellationToken);
 
-//    [HttpGet("history")]
-//    public async Task<IActionResult> GetHistory([FromQuery] Guid? promptId, [FromQuery] int pageNumber = 1, [FromQuery] int pageSize = 20)
-//    {
-//        var result = await _sender.Send(new GetPromptHistoryQuery(promptId, pageNumber, pageSize));
-//        return result.IsSuccess ? Ok(result.Value) : BadRequest(new { error = result.Error });
-//    }
+        return Ok(result);
+    }
 
-//    [HttpDelete("{id:guid}")]
-//    public async Task<IActionResult> Delete(Guid id)
-//    {
-//        var result = await _sender.Send(new DeletePromptCommand(id));
-//        return result.IsSuccess ? NoContent() : NotFound(new { error = result.Error });
-//    }
-//}
+    [HttpGet("{id:guid}")]
+    [ProducesResponseType(
+        typeof(PromptDto),
+        StatusCodes.Status200OK)]
+    public async Task<ActionResult<PromptDto>> GetById(
+        Guid id,
+        CancellationToken cancellationToken)
+    {
+        var result = await _sender.Send(
+            new GetPromptQuery(id),
+            cancellationToken);
+
+        return Ok(result);
+    }
+
+    [HttpDelete("{id:guid}")]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    public async Task<IActionResult> Delete(
+        Guid id,
+        CancellationToken cancellationToken)
+    {
+        await _sender.Send(
+            new DeletePromptCommand(id),
+            cancellationToken);
+
+        return NoContent();
+    }
+}

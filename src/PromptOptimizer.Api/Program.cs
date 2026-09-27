@@ -26,10 +26,18 @@ var app = builder.Build();
 // Ensure DB is initialized & seeded
 using (var scope = app.Services.CreateScope())
 {
-    var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+    var dbContext = scope.ServiceProvider
+        .GetRequiredService<AppDbContext>();
 
-    
-    dbContext.Database.Migrate();
+    await dbContext.Database.MigrateAsync();
+
+    if (app.Environment.IsDevelopment()
+        || app.Environment.IsEnvironment("Testing"))
+    {
+        await DatabaseSeeder.SeedAsync(
+            dbContext,
+            app.Configuration);
+    }
 }
 // Custom Middlewares
 app.UseMiddleware<ExceptionMiddleware>();

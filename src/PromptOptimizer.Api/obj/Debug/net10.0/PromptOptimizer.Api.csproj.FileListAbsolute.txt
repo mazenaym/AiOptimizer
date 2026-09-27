@@ -7,15 +7,11 @@ E:\Projects\aioptimizer\src\PromptOptimizer.Api\bin\Debug\net10.0\PromptOptimize
 E:\Projects\aioptimizer\src\PromptOptimizer.Api\bin\Debug\net10.0\PromptOptimizer.Api.dll
 E:\Projects\aioptimizer\src\PromptOptimizer.Api\bin\Debug\net10.0\PromptOptimizer.Api.pdb
 E:\Projects\aioptimizer\src\PromptOptimizer.Api\bin\Debug\net10.0\BCrypt-Net-Next.dll
-E:\Projects\aioptimizer\src\PromptOptimizer.Api\bin\Debug\net10.0\EntityFramework.SqlServer.dll
-E:\Projects\aioptimizer\src\PromptOptimizer.Api\bin\Debug\net10.0\EntityFramework.dll
 E:\Projects\aioptimizer\src\PromptOptimizer.Api\bin\Debug\net10.0\FluentValidation.dll
 E:\Projects\aioptimizer\src\PromptOptimizer.Api\bin\Debug\net10.0\FluentValidation.DependencyInjectionExtensions.dll
 E:\Projects\aioptimizer\src\PromptOptimizer.Api\bin\Debug\net10.0\Humanizer.dll
 E:\Projects\aioptimizer\src\PromptOptimizer.Api\bin\Debug\net10.0\MediatR.dll
 E:\Projects\aioptimizer\src\PromptOptimizer.Api\bin\Debug\net10.0\MediatR.Contracts.dll
-E:\Projects\aioptimizer\src\PromptOptimizer.Api\bin\Debug\net10.0\Microsoft.AspNet.Identity.Core.dll
-E:\Projects\aioptimizer\src\PromptOptimizer.Api\bin\Debug\net10.0\Microsoft.AspNet.Identity.EntityFramework.dll
 E:\Projects\aioptimizer\src\PromptOptimizer.Api\bin\Debug\net10.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 E:\Projects\aioptimizer\src\PromptOptimizer.Api\bin\Debug\net10.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 E:\Projects\aioptimizer\src\PromptOptimizer.Api\bin\Debug\net10.0\Microsoft.Bcl.Cryptography.dll
@@ -173,7 +169,6 @@ E:\Projects\aioptimizer\src\PromptOptimizer.Api\obj\Debug\net10.0\staticwebasset
 E:\Projects\aioptimizer\src\PromptOptimizer.Api\obj\Debug\net10.0\staticwebassets.development.json
 E:\Projects\aioptimizer\src\PromptOptimizer.Api\obj\Debug\net10.0\staticwebassets.build.endpoints.json
 E:\Projects\aioptimizer\src\PromptOptimizer.Api\obj\Debug\net10.0\swae.build.ex.cache
-E:\Projects\aioptimizer\src\PromptOptimizer.Api\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
 E:\Projects\aioptimizer\src\PromptOptimizer.Api\obj\Debug\net10.0\PromptOp.4BBBDC60.Up2Date
 E:\Projects\aioptimizer\src\PromptOptimizer.Api\obj\Debug\net10.0\PromptOptimizer.Api.dll
 E:\Projects\aioptimizer\src\PromptOptimizer.Api\obj\Debug\net10.0\refint\PromptOptimizer.Api.dll

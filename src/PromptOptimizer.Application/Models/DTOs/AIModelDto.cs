@@ -1,12 +1,11 @@
 namespace PromptOptimizer.Application.Models.DTOs;
 
-public record AIModelDto(
+public sealed record AIModelDto(
     Guid Id,
     string Name,
-    string ModelKey,
-    string Provider,
-    int ContextWindow,
-    decimal InputCostPer1k,
-    decimal OutputCostPer1k,
-    bool IsActive
-);
+    string ModelIdentifier,
+    string ProviderName,
+    string ProviderCode,
+    int? ContextWindow,
+    decimal? InputPricePerMillionTokens,
+    decimal? OutputPricePerMillionTokens);

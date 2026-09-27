@@ -19,5 +19,7 @@ namespace PromptOptimizer.Application.Common.Interfaces
         DbSet<Subscription> Subscriptions { get; }
         DbSet<UsageRecord> UsageRecords { get; }
         DbSet<ApplicationUser> Users { get; }
+        Task<int> SaveChangesAsync(
+    CancellationToken cancellationToken = default);
     }
 }
