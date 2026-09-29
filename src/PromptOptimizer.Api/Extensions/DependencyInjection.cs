@@ -10,6 +10,8 @@ namespace PromptOptimizer.Api.Extensions;
 
 public static class DependencyInjection
 {
+    public const string FrontendCorsPolicy = "Frontend";
+
     public static IServiceCollection AddApiServices(
         this IServiceCollection services,
         IConfiguration configuration)
@@ -36,6 +38,30 @@ public static class DependencyInjection
 
         services.AddHttpContextAccessor();
         services.AddScoped<ICurrentUserService, CurrentUserService>();
+
+        services.AddCors(options => options.AddPolicy(FrontendCorsPolicy, policy =>
+        {
+            var origins = configuration.GetSection("Cors:AllowedOrigins").Get<string[]>() ?? [];
+            foreach (var origin in origins)
+            {
+                if (!Uri.TryCreate(origin, UriKind.Absolute, out var uri)
+                    || (uri.Scheme != "http" && uri.Scheme != "https")
+                    || !string.IsNullOrEmpty(uri.UserInfo)
+                    || !string.IsNullOrEmpty(uri.Query)
+                    || !string.IsNullOrEmpty(uri.Fragment)
+                    || uri.AbsolutePath != "/"
+                    || uri.Host.Contains('*'))
+                {
+                    throw new InvalidOperationException("Cors:AllowedOrigins must contain explicit HTTP(S) origins without paths or credentials.");
+                }
+            }
+
+            if (origins.Length > 0)
+                policy.WithOrigins(origins.Select(origin => origin.TrimEnd('/')).ToArray());
+
+            policy.WithHeaders("Authorization", "Content-Type")
+                .WithMethods("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS");
+        }));
 
         services.AddControllers()
             .ConfigureApiBehaviorOptions(options =>

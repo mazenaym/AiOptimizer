@@ -1,0 +1,6 @@
+{
+  "PromptOptimizer.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Api",
+  "PromptOptimizer.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Application",
+  "PromptOptimizer.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Domain",
+  "PromptOptimizer.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Infrastructure"
+}

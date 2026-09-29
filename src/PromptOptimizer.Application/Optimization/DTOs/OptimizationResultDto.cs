@@ -1,18 +1,22 @@
-using PromptOptimizer.Domain.Enums;
-
 namespace PromptOptimizer.Application.Optimization.DTOs;
 
-public record OptimizationResultDto(
+public sealed record OptimizationResultDto(
     Guid OptimizationId,
     Guid PromptId,
     string OriginalContent,
     string OptimizedContent,
-    string Explanation,
-    OptimizationStatus Status,
-    int PromptTokens,
-    int CompletionTokens,
-    int TotalTokens,
-    double ExecutionTimeMs,
-    string? ModelName,
+    Guid ModelId,
+    string ModelName,
+    string ModelIdentifier,
+    string ProviderCode,
+    int? ProcessingTimeMs,
+    int? OriginalTokens,
+    int? OptimizedTokens,
+    int? TokensSaved,
+    decimal? ReductionPercentage,
+    int? ProviderInputTokens,
+    int? ProviderOutputTokens,
+    int? ProviderTotalTokens,
+    decimal? EstimatedCost,
     DateTime CreatedAt
 );

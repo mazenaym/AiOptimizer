@@ -55,6 +55,9 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseRouting();
+app.UseCors(PromptOptimizer.Api.Extensions.DependencyInjection.FrontendCorsPolicy);
+
 app.UseAuthentication();
 app.UseAuthorization();
 

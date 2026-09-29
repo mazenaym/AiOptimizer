@@ -138,190 +138,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PromptsController.cs",
-              "DocumentMoniker": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Api\\Controllers\\PromptsController.cs",
-              "RelativeDocumentMoniker": "src\\PromptOptimizer.Api\\Controllers\\PromptsController.cs",
-              "ToolTip": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Api\\Controllers\\PromptsController.cs",
-              "RelativeToolTip": "src\\PromptOptimizer.Api\\Controllers\\PromptsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-27T16:49:45.002Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DeletePromptCommand.cs",
-              "DocumentMoniker": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Application\\Prompts\\Commands\\DeletePrompt\\DeletePromptCommand.cs",
-              "RelativeDocumentMoniker": "src\\PromptOptimizer.Application\\Prompts\\Commands\\DeletePrompt\\DeletePromptCommand.cs",
-              "ToolTip": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Application\\Prompts\\Commands\\DeletePrompt\\DeletePromptCommand.cs",
-              "RelativeToolTip": "src\\PromptOptimizer.Application\\Prompts\\Commands\\DeletePrompt\\DeletePromptCommand.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAADwvzIAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-27T16:49:29.599Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "GetPromptQuery.cs",
-              "DocumentMoniker": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Application\\Prompts\\Queries\\GetPrompt\\GetPromptQuery.cs",
-              "RelativeDocumentMoniker": "src\\PromptOptimizer.Application\\Prompts\\Queries\\GetPrompt\\GetPromptQuery.cs",
-              "ToolTip": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Application\\Prompts\\Queries\\GetPrompt\\GetPromptQuery.cs",
-              "RelativeToolTip": "src\\PromptOptimizer.Application\\Prompts\\Queries\\GetPrompt\\GetPromptQuery.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAowDMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-27T16:47:56.057Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CreatePromptCommand.cs",
-              "DocumentMoniker": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Application\\Prompts\\Commands\\CreatePrompt\\CreatePromptCommand.cs",
-              "RelativeDocumentMoniker": "src\\PromptOptimizer.Application\\Prompts\\Commands\\CreatePrompt\\CreatePromptCommand.cs",
-              "ToolTip": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Application\\Prompts\\Commands\\CreatePrompt\\CreatePromptCommand.cs",
-              "RelativeToolTip": "src\\PromptOptimizer.Application\\Prompts\\Commands\\CreatePrompt\\CreatePromptCommand.cs",
-              "ViewState": "AgIAAFUAAAAAAAAAAAAiwF8AAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-27T16:45:26.87Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PagedResult.cs",
-              "DocumentMoniker": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Application\\Common\\Models\\PagedResult.cs",
-              "RelativeDocumentMoniker": "src\\PromptOptimizer.Application\\Common\\Models\\PagedResult.cs",
-              "ToolTip": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Application\\Common\\Models\\PagedResult.cs",
-              "RelativeToolTip": "src\\PromptOptimizer.Application\\Common\\Models\\PagedResult.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-27T16:44:36.251Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "PromptDto.cs",
-              "DocumentMoniker": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Application\\Prompts\\DTOs\\PromptDto.cs",
-              "RelativeDocumentMoniker": "src\\PromptOptimizer.Application\\Prompts\\DTOs\\PromptDto.cs",
-              "ToolTip": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Application\\Prompts\\DTOs\\PromptDto.cs",
-              "RelativeToolTip": "src\\PromptOptimizer.Application\\Prompts\\DTOs\\PromptDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-27T16:43:25.404Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CurrentUserExtensions.cs",
-              "DocumentMoniker": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Application\\Common\\Extensions\\CurrentUserExtensions.cs",
-              "RelativeDocumentMoniker": "src\\PromptOptimizer.Application\\Common\\Extensions\\CurrentUserExtensions.cs",
-              "ToolTip": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Application\\Common\\Extensions\\CurrentUserExtensions.cs",
-              "RelativeToolTip": "src\\PromptOptimizer.Application\\Common\\Extensions\\CurrentUserExtensions.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAiwBYAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-27T16:42:46.54Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ModelsController.cs",
-              "DocumentMoniker": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Api\\Controllers\\ModelsController.cs",
-              "RelativeDocumentMoniker": "src\\PromptOptimizer.Api\\Controllers\\ModelsController.cs",
-              "ToolTip": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Api\\Controllers\\ModelsController.cs",
-              "RelativeToolTip": "src\\PromptOptimizer.Api\\Controllers\\ModelsController.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAA5wCEAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-27T16:40:14.167Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "GetAvailableModelsQuery.cs",
-              "DocumentMoniker": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Application\\Models\\Queries\\GetAvailableModelsQuery.cs",
-              "RelativeDocumentMoniker": "src\\PromptOptimizer.Application\\Models\\Queries\\GetAvailableModelsQuery.cs",
-              "ToolTip": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Application\\Models\\Queries\\GetAvailableModelsQuery.cs",
-              "RelativeToolTip": "src\\PromptOptimizer.Application\\Models\\Queries\\GetAvailableModelsQuery.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAA5wCMAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-27T16:39:56.886Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "AIModelDto.cs",
-              "DocumentMoniker": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Application\\Models\\DTOs\\AIModelDto.cs",
-              "RelativeDocumentMoniker": "src\\PromptOptimizer.Application\\Models\\DTOs\\AIModelDto.cs",
-              "ToolTip": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Application\\Models\\DTOs\\AIModelDto.cs",
-              "RelativeToolTip": "src\\PromptOptimizer.Application\\Models\\DTOs\\AIModelDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-27T16:39:16.095Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "CategoriesController.cs",
-              "DocumentMoniker": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Api\\Controllers\\CategoriesController.cs",
-              "RelativeDocumentMoniker": "src\\PromptOptimizer.Api\\Controllers\\CategoriesController.cs",
-              "ToolTip": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Api\\Controllers\\CategoriesController.cs",
-              "RelativeToolTip": "src\\PromptOptimizer.Api\\Controllers\\CategoriesController.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAmwCAAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-27T16:38:47.667Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "GetCategoriesQuery.cs",
-              "DocumentMoniker": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Application\\Categories\\Queries\\GetCategoriesQuery.cs",
-              "RelativeDocumentMoniker": "src\\PromptOptimizer.Application\\Categories\\Queries\\GetCategoriesQuery.cs",
-              "ToolTip": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Application\\Categories\\Queries\\GetCategoriesQuery.cs",
-              "RelativeToolTip": "src\\PromptOptimizer.Application\\Categories\\Queries\\GetCategoriesQuery.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAABsAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-27T16:38:16.27Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "PromptOptimizer.Application",
-              "DocumentMoniker": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Application\\PromptOptimizer.Application.csproj",
-              "RelativeDocumentMoniker": "src\\PromptOptimizer.Application\\PromptOptimizer.Application.csproj",
-              "ToolTip": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Application\\PromptOptimizer.Application.csproj",
-              "RelativeToolTip": "src\\PromptOptimizer.Application\\PromptOptimizer.Application.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-09-27T16:37:51.594Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Api\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "src\\PromptOptimizer.Api\\appsettings.Development.json",
-              "ToolTip": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Api\\appsettings.Development.json",
-              "RelativeToolTip": "src\\PromptOptimizer.Api\\appsettings.Development.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-09-27T16:34:56.27Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
@@ -340,6 +158,175 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PromptsController.cs",
+              "DocumentMoniker": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Api\\Controllers\\PromptsController.cs",
+              "RelativeDocumentMoniker": "src\\PromptOptimizer.Api\\Controllers\\PromptsController.cs",
+              "ToolTip": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Api\\Controllers\\PromptsController.cs",
+              "RelativeToolTip": "src\\PromptOptimizer.Api\\Controllers\\PromptsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAUwAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-27T16:49:45.002Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DeletePromptCommand.cs",
+              "DocumentMoniker": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Application\\Prompts\\Commands\\DeletePrompt\\DeletePromptCommand.cs",
+              "RelativeDocumentMoniker": "src\\PromptOptimizer.Application\\Prompts\\Commands\\DeletePrompt\\DeletePromptCommand.cs",
+              "ToolTip": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Application\\Prompts\\Commands\\DeletePrompt\\DeletePromptCommand.cs",
+              "RelativeToolTip": "src\\PromptOptimizer.Application\\Prompts\\Commands\\DeletePrompt\\DeletePromptCommand.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAADwvzIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-27T16:49:29.599Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GetPromptQuery.cs",
+              "DocumentMoniker": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Application\\Prompts\\Queries\\GetPrompt\\GetPromptQuery.cs",
+              "RelativeDocumentMoniker": "src\\PromptOptimizer.Application\\Prompts\\Queries\\GetPrompt\\GetPromptQuery.cs",
+              "ToolTip": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Application\\Prompts\\Queries\\GetPrompt\\GetPromptQuery.cs",
+              "RelativeToolTip": "src\\PromptOptimizer.Application\\Prompts\\Queries\\GetPrompt\\GetPromptQuery.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAowDMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-27T16:47:56.057Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CreatePromptCommand.cs",
+              "DocumentMoniker": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Application\\Prompts\\Commands\\CreatePrompt\\CreatePromptCommand.cs",
+              "RelativeDocumentMoniker": "src\\PromptOptimizer.Application\\Prompts\\Commands\\CreatePrompt\\CreatePromptCommand.cs",
+              "ToolTip": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Application\\Prompts\\Commands\\CreatePrompt\\CreatePromptCommand.cs",
+              "RelativeToolTip": "src\\PromptOptimizer.Application\\Prompts\\Commands\\CreatePrompt\\CreatePromptCommand.cs",
+              "ViewState": "AgIAAFUAAAAAAAAAAAAiwF8AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-27T16:45:26.87Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PagedResult.cs",
+              "DocumentMoniker": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Application\\Common\\Models\\PagedResult.cs",
+              "RelativeDocumentMoniker": "src\\PromptOptimizer.Application\\Common\\Models\\PagedResult.cs",
+              "ToolTip": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Application\\Common\\Models\\PagedResult.cs",
+              "RelativeToolTip": "src\\PromptOptimizer.Application\\Common\\Models\\PagedResult.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-27T16:44:36.251Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PromptDto.cs",
+              "DocumentMoniker": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Application\\Prompts\\DTOs\\PromptDto.cs",
+              "RelativeDocumentMoniker": "src\\PromptOptimizer.Application\\Prompts\\DTOs\\PromptDto.cs",
+              "ToolTip": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Application\\Prompts\\DTOs\\PromptDto.cs",
+              "RelativeToolTip": "src\\PromptOptimizer.Application\\Prompts\\DTOs\\PromptDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-27T16:43:25.404Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CurrentUserExtensions.cs",
+              "DocumentMoniker": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Application\\Common\\Extensions\\CurrentUserExtensions.cs",
+              "RelativeDocumentMoniker": "src\\PromptOptimizer.Application\\Common\\Extensions\\CurrentUserExtensions.cs",
+              "ToolTip": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Application\\Common\\Extensions\\CurrentUserExtensions.cs",
+              "RelativeToolTip": "src\\PromptOptimizer.Application\\Common\\Extensions\\CurrentUserExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAiwBYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-27T16:42:46.54Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ModelsController.cs",
+              "DocumentMoniker": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Api\\Controllers\\ModelsController.cs",
+              "RelativeDocumentMoniker": "src\\PromptOptimizer.Api\\Controllers\\ModelsController.cs",
+              "ToolTip": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Api\\Controllers\\ModelsController.cs",
+              "RelativeToolTip": "src\\PromptOptimizer.Api\\Controllers\\ModelsController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAA5wCEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-27T16:40:14.167Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "GetAvailableModelsQuery.cs",
+              "DocumentMoniker": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Application\\Models\\Queries\\GetAvailableModelsQuery.cs",
+              "RelativeDocumentMoniker": "src\\PromptOptimizer.Application\\Models\\Queries\\GetAvailableModelsQuery.cs",
+              "ToolTip": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Application\\Models\\Queries\\GetAvailableModelsQuery.cs",
+              "RelativeToolTip": "src\\PromptOptimizer.Application\\Models\\Queries\\GetAvailableModelsQuery.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAA5wCMAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-27T16:39:56.886Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AIModelDto.cs",
+              "DocumentMoniker": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Application\\Models\\DTOs\\AIModelDto.cs",
+              "RelativeDocumentMoniker": "src\\PromptOptimizer.Application\\Models\\DTOs\\AIModelDto.cs",
+              "ToolTip": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Application\\Models\\DTOs\\AIModelDto.cs",
+              "RelativeToolTip": "src\\PromptOptimizer.Application\\Models\\DTOs\\AIModelDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-27T16:39:16.095Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CategoriesController.cs",
+              "DocumentMoniker": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Api\\Controllers\\CategoriesController.cs",
+              "RelativeDocumentMoniker": "src\\PromptOptimizer.Api\\Controllers\\CategoriesController.cs",
+              "ToolTip": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Api\\Controllers\\CategoriesController.cs",
+              "RelativeToolTip": "src\\PromptOptimizer.Api\\Controllers\\CategoriesController.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAmwCAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-27T16:38:47.667Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "GetCategoriesQuery.cs",
+              "DocumentMoniker": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Application\\Categories\\Queries\\GetCategoriesQuery.cs",
+              "RelativeDocumentMoniker": "src\\PromptOptimizer.Application\\Categories\\Queries\\GetCategoriesQuery.cs",
+              "ToolTip": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Application\\Categories\\Queries\\GetCategoriesQuery.cs",
+              "RelativeToolTip": "src\\PromptOptimizer.Application\\Categories\\Queries\\GetCategoriesQuery.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-27T16:38:16.27Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "PromptOptimizer.Application.csproj",
+              "DocumentMoniker": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Application\\PromptOptimizer.Application.csproj",
+              "RelativeDocumentMoniker": "src\\PromptOptimizer.Application\\PromptOptimizer.Application.csproj",
+              "ToolTip": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Application\\PromptOptimizer.Application.csproj",
+              "RelativeToolTip": "src\\PromptOptimizer.Application\\PromptOptimizer.Application.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-09-27T16:37:51.594Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Api\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "src\\PromptOptimizer.Api\\appsettings.Development.json",
+              "ToolTip": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Api\\appsettings.Development.json",
+              "RelativeToolTip": "src\\PromptOptimizer.Api\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-09-27T16:34:56.27Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 15,
               "Title": "DatabaseSeeder.cs",
               "DocumentMoniker": "E:\\Projects\\aioptimizer\\src\\PromptOptimizer.Infrastructure\\Persistence\\DatabaseSeeder.cs",
@@ -348,8 +335,7 @@
               "RelativeToolTip": "src\\PromptOptimizer.Infrastructure\\Persistence\\DatabaseSeeder.cs",
               "ViewState": "AgIAAGQAAAAAAAAAAAAAAHsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-27T16:34:18.225Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-27T16:34:18.225Z"
             },
             {
               "$type": "Document",
@@ -361,8 +347,7 @@
               "RelativeToolTip": "src\\PromptOptimizer.Infrastructure\\Persistence\\Configurations\\PromptCategoryConfiguration.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAAAA8AAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-27T16:33:16.46Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-27T16:33:16.46Z"
             },
             {
               "$type": "Document",
@@ -374,8 +359,7 @@
               "RelativeToolTip": "src\\PromptOptimizer.Infrastructure\\DependencyInjection.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-26T05:32:02.467Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-26T05:32:02.467Z"
             },
             {
               "$type": "Document",
@@ -555,8 +539,7 @@
               "RelativeToolTip": "src\\PromptOptimizer.Api\\Program.cs",
               "ViewState": "AgIAABUAAAAAAAAAAAAAACgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-25T18:36:39.063Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-25T18:36:39.063Z"
             }
           ]
         }

@@ -1,64 +1,49 @@
 using System.Diagnostics;
 using System.Net.Http.Json;
-using System.Text.Json.Nodes;
+using System.Text.Json;
 using Microsoft.Extensions.Configuration;
+using PromptOptimizer.Application.Common.Exceptions;
 using PromptOptimizer.Application.Common.Interfaces;
 using PromptOptimizer.Domain.ValueObjects;
+using static PromptOptimizer.Infrastructure.AI.ProviderHttp;
 
 namespace PromptOptimizer.Infrastructure.AI.Ollama;
 
 public class OllamaService : IAIService
 {
     private readonly HttpClient _httpClient;
-    private readonly string _baseUrl;
-
+    private readonly IConfiguration _configuration;
     public string ProviderName => "Ollama";
 
     public OllamaService(HttpClient httpClient, IConfiguration configuration)
     {
         _httpClient = httpClient;
-        _baseUrl = configuration["AI:Ollama:BaseUrl"] ?? "http://localhost:11434";
+        _configuration = configuration;
     }
 
-    public async Task<AIOptimizationResponse> OptimizePromptAsync(string originalPrompt, string systemInstructions, string modelKey, CancellationToken cancellationToken = default)
+    public async Task<AIOptimizationResponse> OptimizePromptAsync(string originalPrompt, string systemInstructions,
+        string modelKey, CancellationToken cancellationToken = default)
     {
+        cancellationToken.ThrowIfCancellationRequested();
         var stopwatch = Stopwatch.StartNew();
-        var model = string.IsNullOrWhiteSpace(modelKey) ? "llama3" : modelKey;
-
-        try
+        using var request = new HttpRequestMessage(HttpMethod.Post,
+            Endpoint(_configuration["AI:Ollama:BaseUrl"] ?? "http://localhost:11434", "api/generate"));
+        request.Content = JsonContent.Create(new
         {
-            var payload = new
-            {
-                model,
-                system = systemInstructions,
-                prompt = $"Optimize this prompt:\n{originalPrompt}",
-                stream = false
-            };
-
-            var response = await _httpClient.PostAsJsonAsync($"{_baseUrl}/api/generate", payload, cancellationToken);
-            response.EnsureSuccessStatusCode();
-
-            var json = await response.Content.ReadFromJsonAsync<JsonObject>(cancellationToken: cancellationToken);
-            stopwatch.Stop();
-
-            var content = json?["response"]?.ToString() ?? originalPrompt;
-
-            return new AIOptimizationResponse(
-                content,
-                "Optimized locally via Ollama.",
-                new TokenUsage(40, 80),
-                stopwatch.Elapsed.TotalMilliseconds
-            );
-        }
-        catch
+            model = string.IsNullOrWhiteSpace(modelKey) ? "llama3" : modelKey,
+            system = systemInstructions,
+            prompt = $"Optimize this prompt:\n{originalPrompt}",
+            stream = false
+        });
+        return await SendAsync(_httpClient, request, json =>
         {
-            stopwatch.Stop();
-            return new AIOptimizationResponse(
-                $"[Optimized via Ollama ({model})]\n\n{systemInstructions}\n\nTask: {originalPrompt}",
-                "Structured prompt template applied locally via Ollama.",
-                new TokenUsage(35, 75),
-                stopwatch.Elapsed.TotalMilliseconds
-            );
-        }
+            if (Property(json, "error").ValueKind is not (JsonValueKind.Undefined or JsonValueKind.Null)
+                || Property(json, "done").ValueKind != JsonValueKind.True)
+                throw new AIProviderException(AIProviderFailure.InvalidResponse);
+            var content = RequireText(Text(Property(json, "response")));
+            return new AIOptimizationResponse(content, "Optimized locally via Ollama.",
+                new TokenUsage(Count(json, "prompt_eval_count"), Count(json, "eval_count")),
+                stopwatch.Elapsed.TotalMilliseconds);
+        }, cancellationToken);
     }
 }

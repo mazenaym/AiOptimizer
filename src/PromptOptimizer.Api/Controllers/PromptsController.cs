@@ -1,9 +1,12 @@
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using PromptOptimizer.Api.Contracts;
 using PromptOptimizer.Application.Common.Models;
+using PromptOptimizer.Application.Optimization.DTOs;
 using PromptOptimizer.Application.Prompts.Commands.CreatePrompt;
 using PromptOptimizer.Application.Prompts.Commands.DeletePrompt;
+using PromptOptimizer.Application.Prompts.Commands.OptimizePrompt;
 using PromptOptimizer.Application.Prompts.DTOs;
 using PromptOptimizer.Application.Prompts.Queries.GetPrompt;
 using PromptOptimizer.Application.Prompts.Queries.GetPrompts;
@@ -66,6 +69,26 @@ public sealed class PromptsController : ControllerBase
     {
         var result = await _sender.Send(
             new GetPromptQuery(id),
+            cancellationToken);
+
+        return Ok(result);
+    }
+
+    [HttpPost("{promptId:guid}/optimize")]
+    [ProducesResponseType(typeof(OptimizationResultDto), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(ApiErrorResponse), StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(typeof(ApiErrorResponse), StatusCodes.Status401Unauthorized)]
+    [ProducesResponseType(typeof(ApiErrorResponse), StatusCodes.Status404NotFound)]
+    [ProducesResponseType(typeof(ApiErrorResponse), StatusCodes.Status429TooManyRequests)]
+    [ProducesResponseType(typeof(ApiErrorResponse), StatusCodes.Status502BadGateway)]
+    [ProducesResponseType(typeof(ApiErrorResponse), StatusCodes.Status503ServiceUnavailable)]
+    public async Task<ActionResult<OptimizationResultDto>> Optimize(
+        Guid promptId,
+        [FromBody] OptimizePromptRequest request,
+        CancellationToken cancellationToken)
+    {
+        var result = await _sender.Send(
+            new OptimizePromptCommand(promptId, request.ModelId, request.CustomInstructions),
             cancellationToken);
 
         return Ok(result);

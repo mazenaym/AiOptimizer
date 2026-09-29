@@ -175,3 +175,4 @@ E:\Projects\aioptimizer\src\PromptOptimizer.Api\obj\Debug\net10.0\refint\PromptO
 E:\Projects\aioptimizer\src\PromptOptimizer.Api\obj\Debug\net10.0\PromptOptimizer.Api.pdb
 E:\Projects\aioptimizer\src\PromptOptimizer.Api\obj\Debug\net10.0\PromptOptimizer.Api.genruntimeconfig.cache
 E:\Projects\aioptimizer\src\PromptOptimizer.Api\obj\Debug\net10.0\ref\PromptOptimizer.Api.dll
+E:\Projects\aioptimizer\src\PromptOptimizer.Api\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt

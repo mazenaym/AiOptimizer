@@ -12,18 +12,18 @@ public class UsageRecord : BaseEntity
     public Guid? ModelId { get; set; }
 
 
-    // Tokens
+    // Provider-reported usage. Null means not reported, not zero.
 
-    public int InputTokens { get; set; }
+    public int? InputTokens { get; set; }
 
-    public int OutputTokens { get; set; }
+    public int? OutputTokens { get; set; }
 
-    public int TotalTokens { get; set; }
+    public int? TotalTokens { get; set; }
 
 
     // Cost
 
-    public decimal EstimatedCost { get; set; }
+    public decimal? EstimatedCost { get; set; }
 
 
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;

@@ -43,13 +43,6 @@ public static class DependencyInjection
 
         // AI Services & HTTP
         services.AddExternalServices();
-        //services.AddHttpClient<OpenRouterService>();
-        //services.AddHttpClient<GeminiService>();
-        //services.AddHttpClient<OllamaService>();
-
-        //services.AddTransient<IAIService>(sp => sp.GetRequiredService<OpenRouterService>());
-        //services.AddTransient<IAIService>(sp => sp.GetRequiredService<GeminiService>());
-        //services.AddTransient<IAIService>(sp => sp.GetRequiredService<OllamaService>());
         services.AddScoped<IAIServiceFactory, AIServiceFactory>();
 
         return services;

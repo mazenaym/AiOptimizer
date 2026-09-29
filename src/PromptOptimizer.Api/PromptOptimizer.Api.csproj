@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
     <Nullable>enable</Nullable>
+    <UserSecretsId>PromptOptimizer.Api-35ba65b3-7978-49c5-83db-4f2e99375ce7</UserSecretsId>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 

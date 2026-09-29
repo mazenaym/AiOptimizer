@@ -1,149 +1,152 @@
-//using FluentValidation;
-//using MediatR;
-//using Microsoft.EntityFrameworkCore;
-//using PromptOptimizer.Application.Common.Exceptions;
-//using PromptOptimizer.Application.Common.Interfaces;
-//using PromptOptimizer.Application.Common.Results;
-//using PromptOptimizer.Application.Optimization.DTOs;
-//using PromptOptimizer.Application.Optimization.Models;
-//using PromptOptimizer.Application.Optimization.Services;
-//using PromptOptimizer.Domain.Entities;
-//using PromptOptimizer.Domain.Enums;
-//using DomainOptimization = PromptOptimizer.Domain.Entities.Optimization;
+using FluentValidation;
+using FluentValidation.Results;
+using MediatR;
+using Microsoft.EntityFrameworkCore;
+using PromptOptimizer.Application.Common.Exceptions;
+using PromptOptimizer.Application.Common.Extensions;
+using PromptOptimizer.Application.Common.Interfaces;
+using PromptOptimizer.Application.Optimization.DTOs;
+using PromptOptimizer.Application.Optimization.Models;
+using PromptOptimizer.Application.Optimization.Services;
+using PromptOptimizer.Domain.Entities;
+using AppValidationException = PromptOptimizer.Application.Common.Exceptions.ValidationException;
+using DomainOptimization = PromptOptimizer.Domain.Entities.Optimization;
 
-//namespace PromptOptimizer.Application.Prompts.Commands.OptimizePrompt;
+namespace PromptOptimizer.Application.Prompts.Commands.OptimizePrompt;
 
-//public record OptimizePromptCommand(
-//    Guid? PromptId,
-//    string Content,
-//    PromptCategory Category,
-//    string Provider,
-//    string ModelKey,
-//    string? CustomInstructions
-//) : IRequest<Result<OptimizationResultDto>>;
+public sealed record OptimizePromptCommand(
+    Guid PromptId,
+    Guid ModelId,
+    string? CustomInstructions = null)
+    : IRequest<OptimizationResultDto>;
 
-//public class OptimizePromptCommandValidator : AbstractValidator<OptimizePromptCommand>
-//{
-//    public OptimizePromptCommandValidator()
-//    {
-//        RuleFor(x => x.Content).NotEmpty().MaximumLength(10000);
-//        RuleFor(x => x.Provider).NotEmpty();
-//        RuleFor(x => x.ModelKey).NotEmpty();
-//    }
-//}
+public sealed class OptimizePromptCommandValidator : AbstractValidator<OptimizePromptCommand>
+{
+    public OptimizePromptCommandValidator()
+    {
+        RuleFor(x => x.PromptId).NotEmpty();
+        RuleFor(x => x.ModelId).NotEmpty();
+        RuleFor(x => x.CustomInstructions).MaximumLength(10_000);
+    }
+}
 
-//public class OptimizePromptCommandHandler : IRequestHandler<OptimizePromptCommand, Result<OptimizationResultDto>>
-//{
-//    private readonly IAppDbContext _context;
-//    private readonly IPromptOptimizerEngine _optimizerEngine;
-//    private readonly ICurrentUserService _currentUserService;
+public sealed class OptimizePromptCommandHandler
+    : IRequestHandler<OptimizePromptCommand, OptimizationResultDto>
+{
+    private readonly IAppDbContext _context;
+    private readonly IPromptOptimizerEngine _optimizerEngine;
+    private readonly ICurrentUserService _currentUser;
 
-//    public OptimizePromptCommandHandler(
-//        IAppDbContext context,
-//        IPromptOptimizerEngine optimizerEngine,
-//        ICurrentUserService currentUserService)
-//    {
-//        _context = context;
-//        _optimizerEngine = optimizerEngine;
-//        _currentUserService = currentUserService;
-//    }
+    public OptimizePromptCommandHandler(
+        IAppDbContext context,
+        IPromptOptimizerEngine optimizerEngine,
+        ICurrentUserService currentUser)
+    {
+        _context = context;
+        _optimizerEngine = optimizerEngine;
+        _currentUser = currentUser;
+    }
 
-//    public async Task<Result<OptimizationResultDto>> Handle(OptimizePromptCommand request, CancellationToken cancellationToken)
-//    {
-//        var userId = _currentUserService.UserId;
-//        if (!userId.HasValue)
-//        {
-//            return Result.Failure<OptimizationResultDto>("User is not authenticated.");
-//        }
+    public async Task<OptimizationResultDto> Handle(
+        OptimizePromptCommand request,
+        CancellationToken cancellationToken)
+    {
+        var userId = _currentUser.GetRequiredUserId();
+        cancellationToken.ThrowIfCancellationRequested();
 
-//        Prompt prompt;
-//        if (request.PromptId.HasValue && request.PromptId.Value != Guid.Empty)
-//        {
-//            prompt = await _context.Prompts.FirstOrDefaultAsync(p => p.Id == request.PromptId.Value && p.UserId == userId.Value, cancellationToken)
-//                ?? throw new NotFoundException(nameof(Prompt), request.PromptId.Value);
-//        }
-//        else
-//        {
-//            prompt = new Prompt
-//            {
-//                UserId = userId.Value,
-//                Title = request.Content.Length > 30 ? request.Content[..30] + "..." : request.Content,
-//                Content = request.Content,
-//                Category = request.Category,
-//                CreatedBy = userId.Value.ToString()
-//            };
-//            _context.Prompts.Add(prompt);
-//        }
+        var prompt = await _context.Prompts
+            .Include(x => x.Category)
+            .SingleOrDefaultAsync(x => x.Id == request.PromptId && x.UserId == userId, cancellationToken)
+            ?? throw new NotFoundException(nameof(Prompt), request.PromptId);
 
-//        var aiModel = await _context.AIModels.FirstOrDefaultAsync(m => m.ModelKey == request.ModelKey, cancellationToken);
-//        if (aiModel == null)
-//        {
-//            aiModel = new AIModel
-//            {
-//                Name = request.ModelKey,
-//                ModelKey = request.ModelKey,
-//                Provider = request.Provider,
-//                ContextWindow = 128000,
-//                InputCostPer1k = 0.0015m,
-//                OutputCostPer1k = 0.002m
-//            };
-//            _context.AIModels.Add(aiModel);
-//        }
+        var model = await _context.AIModels
+            .SingleOrDefaultAsync(x => x.Id == request.ModelId, cancellationToken)
+            ?? throw new NotFoundException(nameof(AIModel), request.ModelId);
 
-//        var optimizationReq = new PromptOptimizationRequest(
-//            request.Content,
-//            request.Category,
-//            request.Provider,
-//            request.ModelKey,
-//            request.CustomInstructions
-//        );
+        // Query explicitly so missing provider metadata is rejected before invoking the engine.
+        var provider = await _context.AIProviders
+            .SingleOrDefaultAsync(x => x.Id == model.ProviderId, cancellationToken);
 
-//        var response = await _optimizerEngine.OptimizeAsync(optimizationReq, cancellationToken);
+        if (!model.IsActive || provider is null || !provider.IsActive
+            || string.IsNullOrWhiteSpace(model.ModelIdentifier)
+            || string.IsNullOrWhiteSpace(provider.Code))
+        {
+            throw new AppValidationException(new[]
+            {
+                new ValidationFailure(nameof(request.ModelId),
+                    "The selected model or its provider is inactive or has incomplete configuration.")
+            });
+        }
 
-//        var optimization = new DomainOptimization
-//        {
-//            Prompt = prompt,
-//            AIModel = aiModel,
-//            SystemInstructions = request.CustomInstructions ?? string.Empty,
-//            OriginalContent = request.Content,
-//            OptimizedContent = response.OptimizedContent,
-//            Explanation = response.Explanation,
-//            Status = OptimizationStatus.Completed,
-//            TokenUsage = response.TokenUsage,
-//            ExecutionTimeMs = response.ExecutionTimeMs,
-//            CreatedBy = userId.Value.ToString()
-//        };
+        if (model.InputPricePerMillionTokens < 0 || model.OutputPricePerMillionTokens < 0)
+        {
+            throw new AppValidationException(new[]
+            {
+                new ValidationFailure(nameof(request.ModelId), "The selected model has invalid pricing.")
+            });
+        }
 
-//        _context.Optimizations.Add(optimization);
+        var response = await _optimizerEngine.OptimizeAsync(
+            new PromptOptimizationRequest(
+                prompt.OriginalContent,
+                prompt.Category?.Name,
+                prompt.Language,
+                provider.Code,
+                model.ModelIdentifier,
+                request.CustomInstructions),
+            cancellationToken);
 
-//        var usageRecord = new UsageRecord
-//        {
-//            UserId = userId.Value,
-//            Optimization = optimization,
-//            TokenUsage = response.TokenUsage,
-//            EstimatedCost = (response.TokenUsage.PromptTokens * aiModel.InputCostPer1k / 1000m) +
-//                            (response.TokenUsage.CompletionTokens * aiModel.OutputCostPer1k / 1000m)
-//        };
+        cancellationToken.ThrowIfCancellationRequested();
+        if (string.IsNullOrWhiteSpace(response.OptimizedContent))
+            throw new AIProviderException(AIProviderFailure.InvalidResponse);
 
-//        _context.UsageRecords.Add(usageRecord);
+        var optimization = new DomainOptimization
+        {
+            PromptId = prompt.Id,
+            Prompt = prompt,
+            ModelId = model.Id,
+            Model = model,
+            OptimizedContent = response.OptimizedContent,
+            ProcessingTimeMs = double.IsFinite(response.ExecutionTimeMs)
+                && response.ExecutionTimeMs >= 0 && response.ExecutionTimeMs <= int.MaxValue
+                ? (int)Math.Round(response.ExecutionTimeMs, MidpointRounding.AwayFromZero)
+                : null
+            // Prompt-size estimates and savings remain unknown. Provider usage is not a substitute.
+        };
 
-//        await _context.SaveChangesAsync(cancellationToken);
+        decimal? estimatedCost = null;
+        if (response.TokenUsage.PromptTokens is int inputTokens
+            && response.TokenUsage.CompletionTokens is int outputTokens
+            && model.InputPricePerMillionTokens is decimal inputPrice
+            && model.OutputPricePerMillionTokens is decimal outputPrice)
+        {
+            estimatedCost = Math.Round(
+                inputTokens * inputPrice / 1_000_000m + outputTokens * outputPrice / 1_000_000m,
+                10, MidpointRounding.AwayFromZero);
+        }
 
-//        var resultDto = new OptimizationResultDto(
-//            optimization.Id,
-//            prompt.Id,
-//            optimization.OriginalContent,
-//            optimization.OptimizedContent,
-//            optimization.Explanation,
-//            optimization.Status,
-//            optimization.TokenUsage.PromptTokens,
-//            optimization.TokenUsage.CompletionTokens,
-//            optimization.TokenUsage.TotalTokens,
-//            optimization.ExecutionTimeMs,
-//            aiModel.Name,
-//            optimization.CreatedAt
-//        );
+        var usage = new UsageRecord
+        {
+            UserId = userId,
+            ModelId = model.Id,
+            Model = model,
+            OptimizationId = optimization.Id,
+            Optimization = optimization,
+            InputTokens = response.TokenUsage.PromptTokens,
+            OutputTokens = response.TokenUsage.CompletionTokens,
+            TotalTokens = response.TokenUsage.TotalTokens,
+            EstimatedCost = estimatedCost
+        };
 
-//        return Result.Success(resultDto);
-//    }
-//}
+        _context.Optimizations.Add(optimization);
+        _context.UsageRecords.Add(usage);
+        await _context.SaveChangesAsync(cancellationToken);
+
+        return new OptimizationResultDto(
+            optimization.Id, prompt.Id, prompt.OriginalContent, optimization.OptimizedContent,
+            model.Id, model.Name, model.ModelIdentifier, provider.Code, optimization.ProcessingTimeMs,
+            optimization.OriginalTokens, optimization.OptimizedTokens, optimization.TokensSaved,
+            optimization.ReductionPercentage, usage.InputTokens, usage.OutputTokens, usage.TotalTokens,
+            usage.EstimatedCost, optimization.CreatedAt);
+    }
+}

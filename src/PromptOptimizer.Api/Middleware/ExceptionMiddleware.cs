@@ -22,6 +22,11 @@ public class ExceptionMiddleware
         {
             await _next(context);
         }
+        catch (OperationCanceledException) when (context.RequestAborted.IsCancellationRequested)
+        {
+            // The client disconnected; do not turn cancellation into an error response.
+            throw;
+        }
         catch (Exception exception)
         {
             // لا يمكن تغيير الاستجابة بعد بدء إرسالها.
@@ -47,6 +52,22 @@ public class ExceptionMiddleware
 
         switch (exception)
         {
+            case AIProviderException provider:
+                // Use fixed public messages, never an upstream or exception message.
+                (statusCode, message) = provider.Failure switch
+                {
+                    AIProviderFailure.RateLimit => (
+                        StatusCodes.Status429TooManyRequests,
+                        "The AI service is rate limited. Please try again later."),
+                    AIProviderFailure.InvalidResponse => (
+                        StatusCodes.Status502BadGateway,
+                        "The AI service returned an invalid response. Please try again later."),
+                    _ => (
+                        StatusCodes.Status503ServiceUnavailable,
+                        "The AI service is currently unavailable. Please try again later.")
+                };
+                break;
+
             case ConflictException conflict:
                 statusCode = StatusCodes.Status409Conflict;
                 message = conflict.Message;

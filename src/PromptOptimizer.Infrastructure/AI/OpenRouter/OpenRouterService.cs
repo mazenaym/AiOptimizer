@@ -1,42 +1,37 @@
 using System.Diagnostics;
 using System.Net.Http.Json;
-using System.Text.Json.Nodes;
+using System.Text.Json;
 using Microsoft.Extensions.Configuration;
+using PromptOptimizer.Application.Common.Exceptions;
 using PromptOptimizer.Application.Common.Interfaces;
 using PromptOptimizer.Domain.ValueObjects;
+using static PromptOptimizer.Infrastructure.AI.ProviderHttp;
 
 namespace PromptOptimizer.Infrastructure.AI.OpenRouter;
 
 public class OpenRouterService : IAIService
 {
     private readonly HttpClient _httpClient;
-    private readonly string _apiKey;
-
+    private readonly IConfiguration _configuration;
     public string ProviderName => "OpenRouter";
 
     public OpenRouterService(HttpClient httpClient, IConfiguration configuration)
     {
         _httpClient = httpClient;
-        _apiKey = configuration["AI:OpenRouter:ApiKey"] ?? string.Empty;
+        _configuration = configuration;
     }
 
-    public async Task<AIOptimizationResponse> OptimizePromptAsync(string originalPrompt, string systemInstructions, string modelKey, CancellationToken cancellationToken = default)
+    public async Task<AIOptimizationResponse> OptimizePromptAsync(string originalPrompt, string systemInstructions,
+        string modelKey, CancellationToken cancellationToken = default)
     {
+        cancellationToken.ThrowIfCancellationRequested();
+        var key = _configuration["AI:OpenRouter:ApiKey"] ?? string.Empty;
+        RequireKey(key);
         var stopwatch = Stopwatch.StartNew();
-
-        if (string.IsNullOrWhiteSpace(_apiKey))
-        {
-            stopwatch.Stop();
-            // Mock fallback response for demonstration when API key is missing
-            return new AIOptimizationResponse(
-                $"[Optimized via OpenRouter ({modelKey})]\n\nRole: Expert Prompt Assistant\nGoal: {originalPrompt}\nFormat: Structured JSON / Step-by-Step",
-                "Enhanced role specification, specified output format, and added context guidelines.",
-                new TokenUsage(45, 90),
-                stopwatch.Elapsed.TotalMilliseconds
-            );
-        }
-
-        var payload = new
+        using var request = new HttpRequestMessage(HttpMethod.Post,
+            Endpoint(_configuration["AI:OpenRouter:BaseUrl"] ?? "https://openrouter.ai/api/v1", "chat/completions"));
+        request.Headers.TryAddWithoutValidation("Authorization", $"Bearer {key}");
+        request.Content = JsonContent.Create(new
         {
             model = string.IsNullOrWhiteSpace(modelKey) ? "openai/gpt-4o-mini" : modelKey,
             messages = new[]
@@ -44,27 +39,17 @@ public class OpenRouterService : IAIService
                 new { role = "system", content = systemInstructions },
                 new { role = "user", content = $"Please optimize the following prompt for best results:\n\n{originalPrompt}" }
             }
-        };
-
-        using var request = new HttpRequestMessage(HttpMethod.Post, "https://openrouter.ai/api/v1/chat/completions");
-        request.Headers.Add("Authorization", $"Bearer {_apiKey}");
-        request.Content = JsonContent.Create(payload);
-
-        var response = await _httpClient.SendAsync(request, cancellationToken);
-        response.EnsureSuccessStatusCode();
-
-        var json = await response.Content.ReadFromJsonAsync<JsonObject>(cancellationToken: cancellationToken);
-        stopwatch.Stop();
-
-        var content = json?["choices"]?[0]?["message"]?["content"]?.ToString() ?? originalPrompt;
-        var promptTokens = json?["usage"]?["prompt_tokens"]?.GetValue<int>() ?? 0;
-        var completionTokens = json?["usage"]?.AsObject().ContainsKey("completion_tokens") == true ? json["usage"]!["completion_tokens"]!.GetValue<int>() : 0;
-
-        return new AIOptimizationResponse(
-            content,
-            "Optimized prompt using OpenRouter API.",
-            new TokenUsage(promptTokens, completionTokens),
-            stopwatch.Elapsed.TotalMilliseconds
-        );
+        });
+        return await SendAsync(_httpClient, request, json =>
+        {
+            if (Property(json, "error").ValueKind is not (JsonValueKind.Undefined or JsonValueKind.Null))
+                throw new AIProviderException(AIProviderFailure.InvalidResponse);
+            var message = Property(First(Property(json, "choices")), "message");
+            var content = RequireText(Text(Property(message, "content")));
+            var usage = Property(json, "usage");
+            return new AIOptimizationResponse(content, "Optimized prompt using OpenRouter API.",
+                new TokenUsage(Count(usage, "prompt_tokens"), Count(usage, "completion_tokens")),
+                stopwatch.Elapsed.TotalMilliseconds);
+        }, cancellationToken);
     }
 }

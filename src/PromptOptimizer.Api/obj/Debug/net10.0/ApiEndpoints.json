@@ -32,6 +32,26 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "PromptOptimizer.Api.Controllers.CategoriesController",
+    "Method": "Get",
+    "RelativePath": "api/categories",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[PromptOptimizer.Application.Categories.Queries.CategoryDto, PromptOptimizer.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "PromptOptimizer.Api.Controllers.HealthController",
     "Method": "Check",
     "RelativePath": "api/Health",
@@ -40,5 +60,215 @@
     "Order": 0,
     "Parameters": [],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PromptOptimizer.Api.Controllers.ModelsController",
+    "Method": "Get",
+    "RelativePath": "api/models",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[PromptOptimizer.Application.Models.DTOs.AIModelDto, PromptOptimizer.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "PromptOptimizer.Api.Controllers.PromptsController",
+    "Method": "Create",
+    "RelativePath": "api/prompts",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "PromptOptimizer.Application.Prompts.Commands.CreatePrompt.CreatePromptCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "PromptOptimizer.Application.Prompts.DTOs.PromptDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 201
+      }
+    ]
+  },
+  {
+    "ContainingType": "PromptOptimizer.Api.Controllers.PromptsController",
+    "Method": "GetAll",
+    "RelativePath": "api/prompts",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "PromptOptimizer.Application.Common.Models.PagedResult\u00601[[PromptOptimizer.Application.Prompts.DTOs.PromptListItemDto, PromptOptimizer.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "PromptOptimizer.Api.Controllers.PromptsController",
+    "Method": "GetById",
+    "RelativePath": "api/prompts/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "PromptOptimizer.Application.Prompts.DTOs.PromptDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "PromptOptimizer.Api.Controllers.PromptsController",
+    "Method": "Delete",
+    "RelativePath": "api/prompts/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 204
+      }
+    ]
+  },
+  {
+    "ContainingType": "PromptOptimizer.Api.Controllers.PromptsController",
+    "Method": "Optimize",
+    "RelativePath": "api/prompts/{promptId}/optimize",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "promptId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "PromptOptimizer.Api.Contracts.OptimizePromptRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "PromptOptimizer.Application.Optimization.DTOs.OptimizationResultDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "PromptOptimizer.Api.Contracts.ApiErrorResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      },
+      {
+        "Type": "PromptOptimizer.Api.Contracts.ApiErrorResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 401
+      },
+      {
+        "Type": "PromptOptimizer.Api.Contracts.ApiErrorResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 404
+      },
+      {
+        "Type": "PromptOptimizer.Api.Contracts.ApiErrorResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 429
+      },
+      {
+        "Type": "PromptOptimizer.Api.Contracts.ApiErrorResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 502
+      },
+      {
+        "Type": "PromptOptimizer.Api.Contracts.ApiErrorResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 503
+      }
+    ]
   }
 ]

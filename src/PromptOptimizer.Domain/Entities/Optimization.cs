@@ -13,13 +13,13 @@ public class Optimization : BaseEntity
     public string OptimizedContent { get; set; } = null!;
 
 
-    // Token information
+    // Prompt-size estimates. Null until a suitable token counter is available.
 
-    public int OriginalTokens { get; set; }
+    public int? OriginalTokens { get; set; }
 
-    public int OptimizedTokens { get; set; }
+    public int? OptimizedTokens { get; set; }
 
-    public int TokensSaved { get; set; }
+    public int? TokensSaved { get; set; }
 
     public decimal? ReductionPercentage { get; set; }
 

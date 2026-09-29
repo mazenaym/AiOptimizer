@@ -353,10 +353,10 @@ namespace PromptOptimizer.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int>("OptimizedTokens")
+                    b.Property<int?>("OptimizedTokens")
                         .HasColumnType("integer");
 
-                    b.Property<int>("OriginalTokens")
+                    b.Property<int?>("OriginalTokens")
                         .HasColumnType("integer");
 
                     b.Property<int?>("ProcessingTimeMs")
@@ -373,7 +373,7 @@ namespace PromptOptimizer.Infrastructure.Migrations
                         .HasPrecision(7, 2)
                         .HasColumnType("numeric(7,2)");
 
-                    b.Property<int>("TokensSaved")
+                    b.Property<int?>("TokensSaved")
                         .HasColumnType("integer");
 
                     b.HasKey("Id");
@@ -624,11 +624,11 @@ namespace PromptOptimizer.Infrastructure.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<decimal>("EstimatedCost")
+                    b.Property<decimal?>("EstimatedCost")
                         .HasPrecision(18, 10)
                         .HasColumnType("numeric(18,10)");
 
-                    b.Property<int>("InputTokens")
+                    b.Property<int?>("InputTokens")
                         .HasColumnType("integer");
 
                     b.Property<Guid?>("ModelId")
@@ -637,10 +637,10 @@ namespace PromptOptimizer.Infrastructure.Migrations
                     b.Property<Guid?>("OptimizationId")
                         .HasColumnType("uuid");
 
-                    b.Property<int>("OutputTokens")
+                    b.Property<int?>("OutputTokens")
                         .HasColumnType("integer");
 
-                    b.Property<int>("TotalTokens")
+                    b.Property<int?>("TotalTokens")
                         .HasColumnType("integer");
 
                     b.Property<Guid>("UserId")

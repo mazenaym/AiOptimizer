@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PromptOptimizer.UnitTests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0d7edb8d270b707c6c7489d72546d79a8ed0b20b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e38d96455bfc7826099cb74dbe130a9269dfe5aa")]
 [assembly: System.Reflection.AssemblyProductAttribute("PromptOptimizer.UnitTests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PromptOptimizer.UnitTests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,4 +1,5 @@
 using PromptOptimizer.Application.Common.Interfaces;
+using PromptOptimizer.Application.Common.Exceptions;
 
 namespace PromptOptimizer.Infrastructure.AI;
 
@@ -13,7 +14,9 @@ public class AIServiceFactory : IAIServiceFactory
 
     public IAIService GetService(string providerName)
     {
-        var service = _aiServices.FirstOrDefault(s => s.ProviderName.Equals(providerName, StringComparison.OrdinalIgnoreCase));
-        return service ?? _aiServices.First();
+        var matches = _aiServices.Where(s => s.ProviderName.Equals(providerName, StringComparison.OrdinalIgnoreCase))
+            .Take(2).ToArray();
+        return matches.Length == 1 ? matches[0] : throw new AIProviderException(
+            AIProviderFailure.Configuration, "The requested AI provider is unsupported or is not uniquely registered.");
     }
 }
